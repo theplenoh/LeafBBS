@@ -2,7 +2,7 @@
 // User variable configuration
 $path = "";
 $charset = "utf-8";
-$site_title = "";
+$title_site = "";
 
 // Encoding
 header("Content-Type: text/html; charset={$charset}");
