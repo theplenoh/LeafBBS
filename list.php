@@ -86,6 +86,39 @@ else
 mysqli_close($conn);
 ?>
 </table>
+<p class="pagination">
+<?php
+$start_page = (int)($current_page / $page_list_size) * $page_list_size;
+
+$end_page = $start_page + $page_list_size - 1;
+if ($total_page < $end_page) {
+    $end_page = $total_page;
+}
+
+if ($start_page >= $page_list_size) {
+    $prev_list = ($start_page - 1) * $page_size;
+    echo "<a href=\"$_SERVER['PHP_SELF']?no=$prev_list\">&laquo;</a>\n";
+}
+
+for ($i=$start_page; $i<=$end_page; $i++) {
+    $page = $page_size * $i;
+    $page_num = $i+1;
+
+    if ($no!=$page)
+        echo "<a href=\"$_SERVER['PHP_SELF']?no=$page\">";
+
+    echo " $page_num ";
+
+    if ($no!=$page)
+        echo "</a>";
+}
+
+if ($total_page > $end_page) {
+    $next_list = ($end_page + 1) * $page_size;
+    echo "<a href=\"$_SERVER['PHP_SELF']?no=$next_list\">&raquo;</a>";
+}
+?>
+</p>
 </div>
 </body>
 </html>
