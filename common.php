@@ -2,9 +2,9 @@
 // User variable configuration
 $path = "";
 $charset = "utf-8";
-$site_title = "";
+$site_title = "CocoaBBS";
 
-$board_name = "testboard";
+$board_name = "cocoa_board";
 
 // Encoding
 header("Content-Type: text/html; charset={$charset}");
