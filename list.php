@@ -119,6 +119,9 @@ if ($total_page > $end_page) {
 }
 ?>
 </p>
+<p>
+    <a href="<?=$path?>compose.php">Post</a>
+</p>
 </div>
 </body>
 </html>
