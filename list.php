@@ -97,7 +97,7 @@ if ($total_page < $end_page) {
 
 if ($start_page >= $page_list_size) {
     $prev_list = ($start_page - 1) * $page_size;
-    echo "<a href=\"$_SERVER['PHP_SELF']?no=$prev_list\">&laquo;</a>\n";
+    echo "<a href=\"$_SERVER[PHP_SELF]?no=$prev_list\">&laquo;</a>\n";
 }
 
 for ($i=$start_page; $i<=$end_page; $i++) {
@@ -105,7 +105,7 @@ for ($i=$start_page; $i<=$end_page; $i++) {
     $page_num = $i+1;
 
     if ($no!=$page)
-        echo "<a href=\"$_SERVER['PHP_SELF']?no=$page\">";
+        echo "<a href=\"$_SERVER[PHP_SELF]?no=$page\">";
 
     echo " $page_num ";
 
@@ -115,7 +115,7 @@ for ($i=$start_page; $i<=$end_page; $i++) {
 
 if ($total_page > $end_page) {
     $next_list = ($end_page + 1) * $page_size;
-    echo "<a href=\"$_SERVER['PHP_SELF']?no=$next_list\">&raquo;</a>";
+    echo "<a href=\"$_SERVER[PHP_SELF]?no=$next_list\">&raquo;</a>";
 }
 ?>
 </p>
