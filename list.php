@@ -32,6 +32,7 @@ $current_page = floor($no/$page_size);
 <head>
     <meta charset="<?=$charset?>">
     <title><?=$page_title?> :: <?=$site_title?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>style.css">
 </head>
