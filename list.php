@@ -52,7 +52,7 @@ if ($total_row <= 0)
 {
 ?>
     <tr>
-        <td colspan="5">작성된 게시글이 없습니다.</td>
+        <td colspan="5">There are no posts.</td>
     </tr>
 <?php
 }
