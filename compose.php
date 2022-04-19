@@ -19,7 +19,7 @@ $page_title = "Compose";
 <dl>
     <dt><label for="name">Name</label></dt>
     <dd>
-        <input type="text" name="posted-by" id="posted-by" maxlength="6">
+        <input type="text" name="name" id="name" maxlength="6">
     </dd>
     <dt><label for="passwd">Password</label></dt>
     <dd>

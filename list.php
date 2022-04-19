@@ -75,7 +75,7 @@ else
             <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
         </td>
         <td class="date">
-            <span><?=date("Y-m-d", $row['wdate'])?></span>
+            <span><?=date("Y-m-d", $row['datetime'])?></span>
         </td>
         <td class="views">
             <span><?=$row['views']?></span>
