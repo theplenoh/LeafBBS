@@ -1,3 +1,3 @@
 <?php
-    header("Location: list.php");
+header("Location: list.php");
 ?>
