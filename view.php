@@ -15,7 +15,7 @@ else
 $query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$postID}";
 $result = mysqli_query($conn, $query);
 
-// Retreive post info
+// Retrieve post info
 $query = "SELECT * FROM {$board_name} WHERE postID={$postID}";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
