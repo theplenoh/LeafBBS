@@ -61,7 +61,7 @@ $query = "SELECT postID, name, title FROM {$board_name} WHERE thread > {$row['th
 $result = mysqli_query($conn, $query);
 $prev_id = mysqli_fetch_array($result);
 
-if ($prev_id['postID']) // If a prev post exists
+if (isset($prev_id['postID'])) // If a prev post exists
 {
 ?>
 <tr>
