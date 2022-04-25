@@ -44,7 +44,7 @@ $page_title = "Compose";
 </dl>
 <p>
     <button type="submit">Submit</button>
-    <button type="button" onclick="window.location.href='<?=$path?>list.php'">List</button>
+    <a href="<?=$path?>list.php">List</a>
 </p>
 </form>
 </div>
