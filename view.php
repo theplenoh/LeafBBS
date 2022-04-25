@@ -65,7 +65,8 @@ if ($prev_id['postID']) // If a prev post exists
 {
 ?>
 <tr>
-    <td class="title"><a href="<?=$path?>view.php?id=<?=$prev_id['postID']?>"><mark>Prev</mark> <?=$prev_id['title']?></a></td>
+    <th>Prev</th>
+    <td class="title"><a href="<?=$path?>view.php?id=<?=$prev_id['postID']?>"><?=$prev_id['title']?></a></td>
     <td class="name"><?=$prev_id['name']?></td>
 </tr>
 <?php
@@ -80,7 +81,8 @@ if (isset($next_id['postID']))
 {
 ?>
 <tr>
-    <td class="title"><a href="<?=$path?>view.php?id=<?=$next_id['postID']?>"><mark>Next</mark> <?=$next_id['title']?></a></td>
+    <th>Next</th>
+    <td class="title"><a href="<?=$path?>view.php?id=<?=$next_id['postID']?>"><?=$next_id['title']?></a></td>
     <td class="name"><?=$next_id['name']?></td>
 </tr>
 <?php
@@ -99,7 +101,7 @@ $result = mysqli_query($conn, $query);
     <tr>
         <th>No.</th>
         <th>Title</th>
-        <th>Author</th>
+        <th>Posted by</th>
         <th>Date</th>
         <th>Views</th>
     </tr>
@@ -116,7 +118,7 @@ while($row = mysqli_fetch_array($result))
                 <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?id=<?=$row['postID']?>&amp;no=<?=$no?>"><?=strip_tags($row['title'], '<b><i>');?></a>
             </span>
         </td>
-        <td class="author">
+        <td class="posted-by">
             <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
         </td>
         <td class="date">
