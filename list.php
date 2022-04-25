@@ -121,7 +121,7 @@ if ($total_page > $end_page) {
 ?>
 </p>
 <p>
-    <button type="button" onclick="window.location.href='<?=$path?>compose.php';">Post</button>
+    <a href="<?=$path?>compose.php">Post</a>
 </p>
 </div>
 </body>
