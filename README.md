@@ -1,12 +1,12 @@
-# CocoaBBS
+# LeafBBS
 
-CocoaBBS is a bullet-in board system(BBS) written in PHP.  
+LeafBBS is a bullet-in board system(BBS) written in PHP.  
 It is designed to run in LAMP server environment.
 
 ## Create SQL Tables
-### Table `cocoa_board`
+### Table `leaf_board`
 ```
-CREATE TABLE cocoa_board (
+CREATE TABLE leaf_board (
     postID int(11) unsigned NOT NULL AUTO_INCREMENT, 
     thread int(11) unsigned NOT NULL, 
     depth int(11) unsigned NOT NULL default '0', 
@@ -23,4 +23,4 @@ CREATE TABLE cocoa_board (
 ```
 
 ## License Information
-CocoaBBS is licensed and released under GPL v2.
+LeafBBS is licensed and released under GPL v2.
