@@ -2,7 +2,7 @@
 // User variable configuration
 $path = "";
 $charset = "utf-8";
-$site_title = "CocoaBBS";
+$site_title = "LeafBBS";
 
 $board_name = "cocoa_board";
 
