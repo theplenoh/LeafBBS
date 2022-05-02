@@ -4,7 +4,7 @@ $path = "";
 $charset = "utf-8";
 $site_title = "LeafBBS";
 
-$board_name = "cocoa_board";
+$board_name = "leaf_board";
 
 // Encoding
 header("Content-Type: text/html; charset={$charset}");
