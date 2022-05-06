@@ -37,7 +37,7 @@ $current_page = floor($no/$page_size);
     <link rel="stylesheet" type="text/css" href="<?=$path?>style.css">
 </head>
 
-<body class="page-list">
+<body>
 <div id="container">
 <h1><?=$page_title?> :: <?=$site_title?></h1>
 <table class="list">
