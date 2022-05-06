@@ -3,7 +3,7 @@
 LeafBBS is a bullet-in board system(BBS) written in PHP.  
 It is designed to run in LAMP server environment.
 
-The former name of LeafBBS is CocoaBBS as it can be seen in the Git commit history. 
+The former name of LeafBBS is CocoaBBS as it can be observed in the Git commit history. 
 However, Plenoh changed the name of this internet bulltin board system(BBS) since he felt unhealthy and noticed the risk of getting diabetes due to his developing dependency on caffeine and sugar.
 Green diet such as lettuce, cucumber, and spinach is a lot healthier.
 
