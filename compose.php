@@ -27,7 +27,7 @@ $page_title = "Compose";
             Enter a temporary password.<br>
             (Needed later for editing/deleting this post)
         </div>
-        <input type="password" name="password" id="password" maxlength="8">
+        <input type="password" name="password" id="password" maxlength="16">
     </dd>
     <dt><label for="email">E-mail</label></dt>
     <dd>
