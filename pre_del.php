@@ -18,7 +18,7 @@ $postID = $_GET['id'];
 <body>
 <div id="container">
 <h1>Password Confirm before Deleting</h1>
-<form action="del.php?id=<?=$postID?>" method="post">
+<form action="<?=$path?>del.php?id=<?=$postID?>" method="post">
 <dl>
     <dt>Password</dt>
     <dd>
