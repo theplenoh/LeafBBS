@@ -23,7 +23,7 @@ CREATE TABLE leaf_board (
 ```
 
 ## Trivia
-The former name of LeafBBS is CocoaBBS as it can be observed in the Git commit history. 
+The former name of LeafBBS is CocoaBBS as it can be observed in this repo commit history. 
 However, Plenoh changed the name of this internet bulltin board system(BBS) since he felt unhealthy and noticed the risk of getting diabetes due to his developing dependency on caffeine and sugar.
 Green diet such as lettuce, cucumber, and spinach is a lot healthier.
 
