@@ -52,7 +52,7 @@ $row = mysqli_fetch_array($result);
 <a href="<?=$path?>list.php?no=<?=$no?>">List</a>
 <a href="<?=$path?>reply.php?id=<?=$postID?>">Reply</a>
 <a href="<?=$path?>compose.php">Post New</a>
-<a href="<?=$path?>edit.php?id=<?=$postID?>">Edit</a>
+<a href="<?=$path?>pre_edit.php?id=<?=$postID?>">Edit</a>
 <a href="<?=$path?>pre_del.php?id=<?=$postID?>">Delete</a>
 </p>
 
