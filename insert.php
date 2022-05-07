@@ -7,7 +7,7 @@ $posted_by = sanitize($_POST['name']);
 $password = sanitize($_POST['password']);
 $email = sanitize($_POST['email']);
 $title = sanitize($_POST['title']);
-$content = filter(sanitize($_POST['content']));
+$content = sanitize($_POST['content']);
 $ip_addr = $_SERVER[REMOTE_ADDR];
 
 // Get the value of max_thread
