@@ -5,6 +5,9 @@ $page_title = "Edit Post";
 require_once $path."db_connect.php";
 
 $postID = $_GET['id'];
+
+$result = mysqli_query($conn, "SELECT * FROM {$board_name} WHERE postID={$postID}");
+$row = mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,10 +28,10 @@ $postID = $_GET['id'];
     <dd>
         <input type="text" name="name" id="name" maxlength="6" value="<?=$row['name']?>">
     </dd>
-    <dt><label for="passwd">Password</label></dt>
+    <dt><label for="password">Password</label></dt>
     <dd>
         <span class="warning">The password must be correct in order to successfulyy edit this positng.</span><br>
-        <input type="password" name="passwd" id="passwd" maxlength="16">
+        <input type="password" name="password" id="password" maxlength="16">
     </dd>
     <dt><label for="email">E-Mail</label></dt>
     <dd>
