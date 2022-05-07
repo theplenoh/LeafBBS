@@ -46,7 +46,7 @@ $row = mysqli_fetch_array($result);
     <dd><?=$row['views']?></dd>
 </dl>
 <h2><?=strip_tags($row['title'])?></h2>
-<pre><?=strip_tags($row['content'])?></pre>
+<p><?=filter($row['content'])?></p>
 
 <p>
 <a href="<?=$path?>list.php?no=<?=$no?>">List</a>
