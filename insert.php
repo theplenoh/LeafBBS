@@ -19,10 +19,12 @@ $max_thread = ceil($max_thread_fetch[0]/1000)*1000 + 1000;
 $query = "INSERT INTO {$board_name} (thread, depth, name, password, email, title, views, datetime, ipaddr, content) ";
 $query.= "VALUES ({$max_thread}, 0, '{$posted_by}', '{$password}', '{$email}', '{$title}', 0, UNIX_TIMESTAMP(), '{$ip_addr}', '{$content}')";
 //$result = mysqli_query($conn, $query);
-if (mysqli_query($conn, $query)) {
+if (mysqli_query($conn, $query))
+{
     echo "Successfully submitted!";
 }
-else {
+else
+{
     echo mysqli_error($conn);
 }
 
@@ -32,8 +34,9 @@ mysqli_close($conn);
 $success = true;
 ?>
 <script>
-if (<?=$success?>) {
+if (<?=$success?>)
+{
     alert("Successfully submitted!");
-    location.href="<?=$path?>list.php";
+    //location.href="<?=$path?>list.php";
 }
 </script>
