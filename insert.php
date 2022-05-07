@@ -8,7 +8,7 @@ $password = sanitize($_POST['password']);
 $email = sanitize($_POST['email']);
 $title = sanitize($_POST['title']);
 $content = sanitize($_POST['content']);
-$ip_addr = $_SERVER[REMOTE_ADDR];
+$ip_addr = $_SERVER['REMOTE_ADDR'];
 
 // Get the value of max_thread
 $query = "SELECT max(thread) FROM {$board_name}";
