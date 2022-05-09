@@ -6,10 +6,10 @@ require_once $path."db_connect.php";
 
 $postID = $_GET['id'];
 
-if (!isset($_GET['no']) || $_GET['no'] < 0)
-    $no = 0;
+if (!isset($_GET['page_num']) || $_GET['page_num'] < 0)
+    $page_num = 0;
 else
-    $no = $_GET['no'];
+    $page_num = $_GET['page_num'];
 
 // Update 'views'
 $query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$postID}";
@@ -49,7 +49,7 @@ $row = mysqli_fetch_array($result);
 <p><?=filter($row['content'])?></p>
 
 <p>
-<a href="<?=$path?>list.php?no=<?=$no?>">List</a>
+<a href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
 <a href="<?=$path?>reply.php?id=<?=$postID?>">Reply</a>
 <a href="<?=$path?>compose.php">Post New</a>
 <a href="<?=$path?>pre_edit.php?id=<?=$postID?>">Edit</a>
@@ -116,7 +116,7 @@ while($row = mysqli_fetch_array($result))
         </td>
         <td class="title">
             <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
-                <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?id=<?=$row['postID']?>&amp;no=<?=$no?>"><?=strip_tags($row['title'], '<b><i>');?></a>
+                <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
             </span>
         </td>
         <td class="posted-by">
