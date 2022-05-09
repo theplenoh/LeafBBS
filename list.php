@@ -4,14 +4,14 @@ $page_title = "List";
 
 require_once $path."db_connect.php";
 
+if (!isset($_GET['no']) || $_GET['no'] < 0)
+    $no = 1;
+else
+    $no = $_GET['no'];
+
 $page_size = 10;
 
 $page_list_size = 5;
-
-if (!isset($_GET['no']) || $_GET['no'] < 0)
-    $no = 0;
-else
-    $no = $_GET['no'];
 
 $query = "SELECT * FROM ${board_name} ORDER BY thread DESC LIMIT {$no}, {$page_size}";
 $result = mysqli_query($conn, $query);
@@ -92,16 +92,19 @@ mysqli_close($conn);
 $start_page = (int)($current_page / $page_list_size) * $page_list_size;
 
 $end_page = $start_page + $page_list_size - 1;
-if ($total_page < $end_page) {
+if ($total_page < $end_page)
+{
     $end_page = $total_page;
 }
 
-if ($start_page >= $page_list_size) {
+if ($start_page >= $page_list_size)
+{
     $prev_list = ($start_page - 1) * $page_size;
     echo "<a href=\"$_SERVER[PHP_SELF]?no=$prev_list\">&laquo;</a>\n";
 }
 
-for ($i=$start_page; $i<=$end_page; $i++) {
+for ($i=$start_page; $i<=$end_page; $i++)
+{
     $page = $page_size * $i;
     $page_num = $i+1;
 
@@ -114,7 +117,8 @@ for ($i=$start_page; $i<=$end_page; $i++) {
         echo "</a>";
 }
 
-if ($total_page > $end_page) {
+if ($total_page > $end_page)
+{
     $next_list = ($end_page + 1) * $page_size;
     echo "<a href=\"$_SERVER[PHP_SELF]?no=$next_list\">&raquo;</a>";
 }
