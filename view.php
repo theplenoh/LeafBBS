@@ -7,7 +7,7 @@ require_once $path."db_connect.php";
 $postID = $_GET['id'];
 
 if (!isset($_GET['page_num']) || $_GET['page_num'] < 0)
-    $page_num = 0;
+    $page_num = 1;
 else
     $page_num = $_GET['page_num'];
 
