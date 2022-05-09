@@ -4,28 +4,19 @@ $page_title = "List";
 
 require_once $path."db_connect.php";
 
-if (!isset($_GET['no']) || $_GET['no'] < 0)
-    $no = 1;
+if (!isset($_GET['page_num']) || $_GET['page_num'] < 0)
+    $page_num = 1;
 else
-    $no = $_GET['no'];
+    $page_num = $_GET['page_num'];
 
 $page_size = 10;
+$page_scale = 5;
 
-$page_list_size = 5;
-
-$query = "SELECT * FROM ${board_name} ORDER BY thread DESC LIMIT {$no}, {$page_size}";
-$result = mysqli_query($conn, $query);
-
-$result_count = mysqli_query($conn, "SELECT COUNT(*) FROM ${board_name}");
+$result_count = mysqli_query($conn, "SELECT COUNT(*) FROM {$board_name};");
 $result_row = mysqli_fetch_row($result_count);
-$total_row = $result_row[0];
+$total = $result_row[0];
 
-if ($total_row <= 0)
-    $total_row = 0;
-
-$total_page = floor(($total_row - 1) / $page_size);
-
-$current_page = floor($no/$page_size);
+$page_max = ceil($total / $page_size);
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,6 +31,10 @@ $current_page = floor($no/$page_size);
 <body>
 <div id="container">
 <h1><?=$page_title?> :: <?=$site_title?></h1>
+<p class="page-info">
+Total number of posts: <?=$total?><br>
+Page info: <?=$page_num?> / <?=$page_max?>
+</p>
 <table class="list">
     <tr>
         <th class="no">No.</th>
@@ -49,7 +44,7 @@ $current_page = floor($no/$page_size);
         <th class="views">Views</th>
     </tr>
 <?php
-if ($total_row <= 0)
+if ($total <= 0)
 {
 ?>
     <tr>
@@ -59,16 +54,23 @@ if ($total_row <= 0)
 }
 else
 {
+    $offset = ($page_num - 1) * $page_size;
+    $block = floor(($page_num - 1) / $page_scale);
+
+    $query = "SELECT * FROM ${board_name} ORDER BY thread DESC LIMIT {$offset}, {$page_size}";
+    $result = mysqli_query($conn, $query);
+
+    $postIdx = $total - $offset;
     while($row=mysqli_fetch_array($result))
     {
 ?>
     <tr>
         <td class="no">
-            <?=$row['postID']?>
+            <?=$postIdx?>
         </td>
         <td class="title">
             <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
-                <?php if ($row['depth'] > 0) echo "└";?><a href="<?=$path?>view.php?id=<?=$row['postID']?>&amp;no=<?=$no?>"><?=strip_tags($row['title'], '<b><i>');?></a>
+                <?php if ($row['depth'] > 0) echo "└";?><a href="<?=$path?>view.php?id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
             </span>
         </td>
         <td class="posted-by">
@@ -82,6 +84,8 @@ else
         </td>
     </tr>
 <?php
+        $offset++;
+        $postIdx--;
     }
 }
 mysqli_close($conn);
@@ -89,38 +93,53 @@ mysqli_close($conn);
 </table>
 <p class="pagination">
 <?php
-$start_page = (int)($current_page / $page_list_size) * $page_list_size;
-
-$end_page = $start_page + $page_list_size - 1;
-if ($total_page < $end_page)
+if ($block > 0)
 {
-    $end_page = $total_page;
+    $prev_block = ($block - 1) * $page_scale + 1;
+    echo "<a href=\"list.php?page_num={$prev_block}\">[&laquo;]</a>";
+}
+else
+{
+    echo "[&laquo;]";
 }
 
-if ($start_page >= $page_list_size)
+if ($page_max > 1 && $offset != 0 && $page_num > 1)
 {
-    $prev_list = ($start_page - 1) * $page_size;
-    echo "<a href=\"$_SERVER[PHP_SELF]?no=$prev_list\">&laquo;</a>\n";
+    $prev_page = $page_num - 1;
+    echo "<a href=\"list.php?page_num={$prev_page}\">[&lsaquo;]</a>";
+}
+else
+{
+    echo "[&lsaquo;]";
 }
 
-for ($i=$start_page; $i<=$end_page; $i++)
+$start_page = $block * $page_scale + 1;
+for($i = 1; $i <= $page_scale && $start_page <= $page_max; $i++, $start_page++)
 {
-    $page = $page_size * $i;
-    $page_num = $i+1;
-
-    if ($no!=$page)
-        echo "<a href=\"$_SERVER[PHP_SELF]?no=$page\">";
-
-    echo " $page_num ";
-
-    if ($no!=$page)
-        echo "</a>";
+    if ($start_page == $page_num)
+        echo "[{$start_page}]";
+    else
+        echo "<a href=\"list.php?page_num={$start_page}\">[{$start_page}]</a>";
 }
 
-if ($total_page > $end_page)
+if ($page_max > $page_num)
 {
-    $next_list = ($end_page + 1) * $page_size;
-    echo "<a href=\"$_SERVER[PHP_SELF]?no=$next_list\">&raquo;</a>";
+    $next_page = $page_num + 1;
+    echo "<a href=\"list.php?page_num={$next_page}\">[&rsaquo;]</a>";
+}
+else
+{
+    echo "[&rsaquo;]";
+}
+
+if ($page_max > ($block + 1) * $page_scale)
+{
+    $next_block = ($block + 1) * $page_scale + 1;
+    echo "<a href=\"list.php?page_num={$next_block}\">[&raquo;]</a>";
+}
+else
+{
+    echo "[&raquo;]";
 }
 ?>
 </p>
