@@ -27,7 +27,7 @@ $postID = $_GET['post_id'];
 </dl>
 <p>
     <input type="submit" value="Confirm">
-    <a href="<?=$path?>list.php">Cancel</a>
+    <a href="<?=$path?>view.php?post_id=<?=$postID?>">Cancel</a>
 </p>
 </form>
 </div>

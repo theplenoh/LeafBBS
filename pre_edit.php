@@ -48,7 +48,7 @@ $row = mysqli_fetch_array($result);
 </dl>
 <p>
     <input type="submit" value="Submit">
-    <a href="<?=$path?>list.php">List</a>
+    <a href="<?=$path?>view.php?post_id=<?=$post_id?>">Cancel</a>
 </p>
 </form>
 </div>
