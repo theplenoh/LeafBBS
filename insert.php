@@ -21,7 +21,6 @@ $query.= "VALUES ({$max_thread}, 0, '{$posted_by}', '{$password}', '{$email}', '
 //$result = mysqli_query($conn, $query);
 if (mysqli_query($conn, $query))
 {
-    echo "Successfully submitted!";
 }
 else
 {
@@ -37,6 +36,6 @@ $success = true;
 if (<?=$success?>)
 {
     alert("Successfully submitted!");
-    //location.href="<?=$path?>list.php";
+    location.href="<?=$path?>list.php";
 }
 </script>

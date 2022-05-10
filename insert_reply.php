@@ -23,7 +23,6 @@ $query.= ",'".($parent_depth+1)."','{$posted_by}','{$password}','{$email}','{$ti
 //$result = mysqli_query($conn, $query);
 if (mysqli_query($conn, $query))
 {
-    echo "Successfully submitted!";
 }
 else
 {
