@@ -4,7 +4,7 @@ $page_title = "View post";
 
 require_once $path."db_connect.php";
 
-$postID = $_GET['id'];
+$postID = $_GET['post_id'];
 
 if (!isset($_GET['page_num']) || $_GET['page_num'] < 0)
     $page_num = 1;

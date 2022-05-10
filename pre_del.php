@@ -4,7 +4,7 @@ $page_title = "Delete Post";
 
 require_once $path."db_connect.php";
 
-$postID = $_GET['id'];
+$postID = $_GET['post_id'];
 ?>
 <!DOCTYPE html>
 <html>

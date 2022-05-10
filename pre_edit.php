@@ -4,7 +4,7 @@ $page_title = "Edit Post";
 
 require_once $path."db_connect.php";
 
-$postID = $_GET['id'];
+$postID = $_GET['post_id'];
 
 $result = mysqli_query($conn, "SELECT * FROM {$board_name} WHERE postID={$postID}");
 $row = mysqli_fetch_array($result);

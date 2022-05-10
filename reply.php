@@ -4,7 +4,7 @@ $page_title = "Reply to";
 
 require_once $path."db_connect.php";
 
-$postID = $_GET['id'];
+$postID = $_GET['post_id'];
 
 $query = "SELECT * FROM {$board_name} WHERE postID='{$postID}'";
 $parent_result = mysqli_query($conn, $query);
