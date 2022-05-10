@@ -31,6 +31,6 @@ history.go(-1);
 if (<?=$success?>)
 {
     alert("Successfully edited!");
-    location.href="<?=$path?>list.php";
+    location.href="<?=$path?>view.php?post_id=<?=postID?>";
 }
 </script>
