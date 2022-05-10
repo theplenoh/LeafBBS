@@ -50,10 +50,10 @@ $row = mysqli_fetch_array($result);
 
 <p>
 <a href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
-<a href="<?=$path?>reply.php?id=<?=$postID?>">Reply</a>
+<a href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
 <a href="<?=$path?>compose.php">Post New</a>
-<a href="<?=$path?>pre_edit.php?id=<?=$postID?>">Edit</a>
-<a href="<?=$path?>pre_del.php?id=<?=$postID?>">Delete</a>
+<a href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
+<a href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
 </p>
 
 <table class="list">
@@ -67,7 +67,7 @@ if (isset($prev_id['postID'])) // If a prev post exists
 ?>
 <tr>
     <th>Prev</th>
-    <td class="title"><a href="<?=$path?>view.php?id=<?=$prev_id['postID']?>"><?=$prev_id['title']?></a></td>
+    <td class="title"><a href="<?=$path?>view.php?post_id=<?=$prev_id['postID']?>"><?=$prev_id['title']?></a></td>
     <td class="name"><?=$prev_id['name']?></td>
 </tr>
 <?php
@@ -83,7 +83,7 @@ if (isset($next_id['postID']))
 ?>
 <tr>
     <th>Next</th>
-    <td class="title"><a href="<?=$path?>view.php?id=<?=$next_id['postID']?>"><?=$next_id['title']?></a></td>
+    <td class="title"><a href="<?=$path?>view.php?post_id=<?=$next_id['postID']?>"><?=$next_id['title']?></a></td>
     <td class="name"><?=$next_id['name']?></td>
 </tr>
 <?php
@@ -116,7 +116,7 @@ while($row = mysqli_fetch_array($result))
         </td>
         <td class="title">
             <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
-                <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
+                <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
             </span>
         </td>
         <td class="posted-by">

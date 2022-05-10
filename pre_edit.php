@@ -22,11 +22,11 @@ $row = mysqli_fetch_array($result);
 <body>
 <div id="container">
 <h1>Edit a Post</h1>
-<form action="<?=$path?>edit.php?id=<?=$postID?>" method="post">
+<form action="<?=$path?>edit.php?post_id=<?=$postID?>" method="post">
 <dl>
     <dt><label for="posted-by">Posted by</label></dt>
     <dd>
-        <input type="text" name="name" id="name" maxlength="6" value="<?=$row['name']?>">
+        <input type="text" name="name" id="posted-by" maxlength="6" value="<?=$row['name']?>">
     </dd>
     <dt><label for="password">Password</label></dt>
     <dd>
