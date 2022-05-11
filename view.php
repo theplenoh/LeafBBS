@@ -100,6 +100,7 @@ $result = mysqli_query($conn, $query);
 ?>
 <table class="list">
     <tr>
+        <th>No.</th>
         <th>Title</th>
         <th>Posted by</th>
         <th>Date</th>
@@ -110,6 +111,9 @@ while($row = mysqli_fetch_array($result))
 {
 ?>
     <tr>
+        <td class="no">
+            <?=$row['postID']?>
+        </td>
         <td class="title">
             <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
                 <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
