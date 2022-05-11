@@ -55,7 +55,7 @@ $parent_content = "\n&gt;".str_replace("\n", "\n&gt;", $parent_row['content']);
 </dl>
 <p>
     <input type="submit" value="Submit">
-    <a href="<?=$path?>view.php?post_id=<?=$post_id?>">Cancel</a>
+    <a href="<?=$path?>view.php?post_id=<?=$postID?>">Cancel</a>
 </p>
 </form>
 </div>
