@@ -112,7 +112,7 @@ while($row = mysqli_fetch_array($result))
 ?>
     <tr>
         <td class="no">
-            <?=($row['depth']==0)?"Orig.":""?>
+            <?=($row['depth']==0)?"Orig.":"-"?>
         </td>
         <td class="title">
             <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
