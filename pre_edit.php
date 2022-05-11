@@ -30,7 +30,7 @@ $row = mysqli_fetch_array($result);
     </dd>
     <dt><label for="password">Password</label></dt>
     <dd>
-        <span class="warning">The password must be correct in order to successfulyy edit this positng.</span><br>
+        <span class="warning">The password must be correct in order to successfully edit this positng.</span><br>
         <input type="password" name="password" id="password" maxlength="16">
     </dd>
     <dt><label for="email">E-Mail</label></dt>
