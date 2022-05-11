@@ -129,7 +129,20 @@ while($row = mysqli_fetch_array($result))
             </span>
         </td>
         <td class="posted-by">
+<?php
+if ($row['email']!="")
+{
+?>
             <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
+<?php
+}
+else
+{
+?>
+            <?=$row['name']?>
+<?php
+}
+?>
         </td>
         <td class="date">
             <span><?=date("Y-m-d", $row['datetime'])?></span>
