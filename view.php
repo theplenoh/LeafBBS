@@ -65,6 +65,7 @@ if ($row['email']!="")
 <a href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
 </p>
 
+<h3 class="sr-only">Prev/Next Post(s)</h3>
 <table class="list">
 <?php
 $query = "SELECT postID, name, title FROM {$board_name} WHERE thread > {$row['thread']} ORDER BY thread ASC LIMIT 1";
@@ -100,6 +101,7 @@ if (isset($next_id['postID']))
 ?>
 </table>
 
+<h3 class="sr-only">Thread and the Related Post(s)</h3>
 <?php
 $thread_end = ceil($row['thread']/1000)*1000;
 $thread_start = $thread_end - 1000;
