@@ -36,8 +36,17 @@ $row = mysqli_fetch_array($result);
     <dt>Posted by</dt>
     <dd><?=$row['name']?></dd>
 
+<?php
+if ($row['email']!="")
+{
+?>
     <dt>E-Mail</dt>
-    <dd><a href="mailto:<?=$row['email']?>"><?=$row['email']?></a></dd>
+    <dd>
+        <a href="mailto:<?=$row['email']?>"><?=$row['email']?></a>
+    </dd>
+<?php
+}
+?>
 
     <dt>Date</dt>
     <dd><?=date("Y-m-d", $row['datetime'])?></dd>
