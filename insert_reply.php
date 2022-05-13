@@ -5,12 +5,12 @@ require_once $path."db_connect.php";
 
 $parent_thread = $_POST['parent_thread'];
 $parent_depth = $_POST['parent_depth'];
-$posted_by = $_POST['name'];
-$password = $_POST['password'];
-$email = $_POST['email'];
-$title = $_POST['title'];
+$posted_by = sanitize($_POST['name']);
+$password = sanitize($_POST['password']);
+$email = sanitize($_POST['email']);
+$title = sanitize($_POST['title']);
 $ip_addr = $_SERVER['REMOTE_ADDR'];
-$content = $_POST['content'];
+$content = sanitize($_POST['content']);
 
 $prev_parent_thread = ceil($parent_thread/1000)*1000 - 1000;
 
