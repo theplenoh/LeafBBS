@@ -6,6 +6,8 @@ $site_title = "LeafBBS";
 
 $board_name = "leaf_board";
 
+$skin_name = "board_default";
+
 // Encoding
 header("Content-Type: text/html; charset={$charset}");
 
