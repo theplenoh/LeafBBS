@@ -35,7 +35,7 @@ $page_max = ceil($total / $page_size);
 Total number of posts: <?=$total?><br>
 Page info: <?=$page_num?> / <?=$page_max?>
 </p>
-<table class="list">
+<table class="post-list">
     <tr>
         <th class="no">No.</th>
         <th class="title">Title</th>
@@ -156,7 +156,7 @@ else
 }
 ?>
 </p>
-<p>
+<p class="buttons">
     <a href="<?=$path?>compose.php">Post</a>
 </p>
 </div>
