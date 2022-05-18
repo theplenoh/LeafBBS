@@ -29,7 +29,7 @@ $page_max = ceil($total / $page_size);
 </head>
 
 <body>
-<div id="container">
+<div id="leaf">
 <h1><?=$page_title?> :: <?=$site_title?></h1>
 <p class="page-info">
 Total number of posts: <?=$total?><br>

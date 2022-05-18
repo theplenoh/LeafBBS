@@ -30,7 +30,7 @@ $row = mysqli_fetch_array($result);
     <link rel="stylesheet" type="text/css" href="<?=$path?>styles/<?=$skin_name?>/style.css">
 </head>
 <body class="page-view">
-<div id="container">
+<div id="leaf">
 <h1><?=$page_title?> :: <?=$site_title?></h1>
 <dl>
     <dt>Posted by</dt>

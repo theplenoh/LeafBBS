@@ -16,7 +16,7 @@ $postID = $_GET['post_id'];
     <link rel="stylesheet" type="text/css" href="<?=$path?>styles/<?=$skin_name?>/style.css">
 </head>
 <body>
-<div id="container">
+<div id="leaf">
 <h1>Password Confirm before Deleting</h1>
 <form action="<?=$path?>del.php?post_id=<?=$postID?>" method="post">
 <dl>

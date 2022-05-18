@@ -20,7 +20,7 @@ $row = mysqli_fetch_array($result);
 </head>
 
 <body>
-<div id="container">
+<div id="leaf">
 <h1>Edit a Post</h1>
 <form action="<?=$path?>edit.php?post_id=<?=$postID?>" method="post">
 <dl>

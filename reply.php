@@ -23,7 +23,7 @@ $parent_content = "\n&gt;".str_replace("\n", "\n&gt;", $parent_row['content']);
 </head>
 
 <body>
-<div id="container">
+<div id="leaf">
 <h1><?=$page_title?> :: <?=$site_title?></h1>
 <form action="<?=$path?>insert_reply.php" method="post">
 <input type="hidden" name="parent_depth" value="<?=$parent_row['depth']?>">
