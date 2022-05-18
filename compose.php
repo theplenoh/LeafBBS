@@ -9,7 +9,7 @@ $page_title = "Compose";
     <title><?=$page_title?> :: <?=$site_title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="<?=$path?>style.css">
+    <link rel="stylesheet" type="text/css" href="<?=$path?>styles/<?=$skin_name?>/style.css">
 </head>
 
 <body>
