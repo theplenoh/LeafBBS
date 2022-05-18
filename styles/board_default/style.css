@@ -3,7 +3,53 @@
 @import url('reset.css');
 
 /** Common **/
+#leaf {
+    margin: 1em;
+    width: 750px;
+}
 
 /** Typography **/
+#leaf {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+#leaf h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/** Layout **/
+#leaf h1 {
+    margin: 0.5em 0;
+}
+#leaf .page-info {
+    margin: 0.5em 0;
+}
+#leaf .post-list {
+    width: 100%;
+}
+#leaf .pagination {
+    margin: 0.5em 0;
+}
+#leaf .buttons {
+    margin: 0.5em 0;
+}
 
 /** Modules **/
+/* post list */
+#leaf .post-list td.no {
+    text-align: center;
+}
+#leaf .post-list td.title {
+}
+#leaf .post-list td.posted-by {
+    text-align: center;
+}
+#leaf .post-list td.date {
+    text-align: center;
+}
+#leaf .post-list td.views {
+    text-align: center;
+}
+
+/** Specifics **/
