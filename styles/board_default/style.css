@@ -5,7 +5,7 @@
 /** Common **/
 #leaf {
     margin: 1em;
-    width: 750px;
+    /*width: 750px;*/
 }
 .sr-only {
     position: absolute;
@@ -71,6 +71,7 @@
 }
 #leaf .post-list tbody td.no {
     text-align: center;
+    font-size: 0.9em;
 }
 #leaf .post-list tbody td.title {
 }
@@ -79,9 +80,11 @@
 }
 #leaf .post-list tbody td.date {
     text-align: center;
+    font-size: 0.9em;
 }
 #leaf .post-list tbody td.views {
     text-align: center;
+    font-size: 0.9em;
 }
 /* buttons */
 #leaf .btn {
