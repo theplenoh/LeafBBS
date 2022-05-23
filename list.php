@@ -36,13 +36,14 @@ Total number of posts: <?=$total?><br>
 Page info: <?=$page_num?> / <?=$page_max?>
 </p>
 <table class="post-list">
+<caption class="sr-only">List of postings</caption>
 <thead>
     <tr>
-        <th class="no">No.</th>
-        <th class="title">Title</th>
-        <th class="posted-by">Posted by</th>
-        <th class="date">Date</th>
-        <th class="views">Views</th>
+        <th class="no" scope="col">No.</th>
+        <th class="title" scope="col">Title</th>
+        <th class="posted-by" scope="col">Posted by</th>
+        <th class="date" scope="col">Date</th>
+        <th class="views" scope="col">Views</th>
     </tr>
 </thead>
 <tbody>
