@@ -27,6 +27,14 @@
     font-size: 2em;
     font-weight: bold;
 }
+#leaf a {
+    color: #333;
+    text-decoration: none;
+}
+#leaf a:hover {
+    color: #0969da;
+    text-decoration: underline;
+}
 
 /** Layout **/
 #leaf h1 {
@@ -39,10 +47,10 @@
     width: 100%;
 }
 #leaf .pagination {
-    margin: 0.5em 0;
+    margin: 1.5em 0;
 }
 #leaf .buttons {
-    margin: 0.5em 0;
+    margin: 1.5em 0;
 }
 
 /** Modules **/
@@ -76,11 +84,17 @@
     text-align: center;
 }
 /* buttons */
-.btn {
+#leaf .btn {
     background-color: #f7f7f7;
     border: 1px solid #dfdfdf;
     border-radius: 4px;
     padding: 0.35em 1.0em;
+    color: #000;
+    text-decoration: none;
+}
+#leaf .btn:hover {
+    background-color: #e2e6ea;
+    border: 1px solid #dae0e5;
     color: #000;
     text-decoration: none;
 }
