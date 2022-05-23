@@ -36,6 +36,7 @@ Total number of posts: <?=$total?><br>
 Page info: <?=$page_num?> / <?=$page_max?>
 </p>
 <table class="post-list">
+<thead>
     <tr>
         <th class="no">No.</th>
         <th class="title">Title</th>
@@ -43,6 +44,8 @@ Page info: <?=$page_num?> / <?=$page_max?>
         <th class="date">Date</th>
         <th class="views">Views</th>
     </tr>
+</thead>
+<tbody>
 <?php
 if ($total <= 0)
 {
@@ -103,6 +106,7 @@ else
 }
 mysqli_close($conn);
 ?>
+</tbody>
 </table>
 <p class="pagination">
 <?php
