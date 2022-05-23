@@ -162,7 +162,7 @@ else
 ?>
 </p>
 <p class="buttons">
-    <a href="<?=$path?>compose.php">Post</a>
+    <a class="btn" href="<?=$path?>compose.php">Post</a>
 </p>
 </div>
 </body>

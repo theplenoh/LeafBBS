@@ -3,6 +3,10 @@
 @import url('reset.css');
 
 /** Common **/
+#leaf {
+    margin: 1em;
+    width: 750px;
+}
 .sr-only {
     position: absolute;
     width: 1px;
@@ -12,10 +16,6 @@
     margin: -1px;
     border: 0;
     clip: rect(0, 0, 0, 0);
-}
-#leaf {
-    margin: 1em;
-    width: 750px;
 }
 
 /** Typography **/
@@ -46,20 +46,43 @@
 }
 
 /** Modules **/
-/* post list */
-#leaf .post-list td.no {
+#leaf .post-list th, 
+#leaf .post-list td {
+    vertical-align: middle;
+}
+/* post list thead */
+#leaf .post-list thead tr {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    height: 35px;
+}
+/* post list tbody */
+#leaf .post-list tbody tr {
+    height: 35px;
+    border-bottom: 1px solid #dfdfdf;
+}
+#leaf .post-list tbody td.no {
     text-align: center;
 }
-#leaf .post-list td.title {
+#leaf .post-list tbody td.title {
 }
-#leaf .post-list td.posted-by {
+#leaf .post-list tbody td.posted-by {
     text-align: center;
 }
-#leaf .post-list td.date {
+#leaf .post-list tbody td.date {
     text-align: center;
 }
-#leaf .post-list td.views {
+#leaf .post-list tbody td.views {
     text-align: center;
+}
+/* buttons */
+.btn {
+    background-color: #f7f7f7;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    padding: 0.35em 1.0em;
+    color: #000;
+    text-decoration: none;
 }
 
 /** Specifics **/
