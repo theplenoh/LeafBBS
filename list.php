@@ -110,56 +110,23 @@ mysqli_close($conn);
 </tbody>
 </table>
 <p class="pagination">
+<?php $prev_block = ($block - 1) * $page_scale + 1; ?>
+    <a href="<?=($block > 0)? "?page_num={$prev_block}":"javascript:;"?>">&laquo;</a>
+<?php $prev_page = $page_num - 1; ?>
+    <a href="<?=($page_max > 1 && $offset != 0 && $page_num && $page_num > 1)? "?page_num={$prev_page}":"javascript:;"?>">&lsaquo;</a>
 <?php
-if ($block > 0)
-{
-    $prev_block = ($block - 1) * $page_scale + 1;
-    echo "<a href=\"list.php?page_num={$prev_block}\">[&laquo;]</a>";
-}
-else
-{
-    echo "[&laquo;]";
-}
-
-if ($page_max > 1 && $offset != 0 && $page_num > 1)
-{
-    $prev_page = $page_num - 1;
-    echo "<a href=\"list.php?page_num={$prev_page}\">[&lsaquo;]</a>";
-}
-else
-{
-    echo "[&lsaquo;]";
-}
-
-$start_page = $block * $page_scale + 1;
-for($i = 1; $i <= $page_scale && $start_page <= $page_max; $i++, $start_page++)
-{
-    if ($start_page == $page_num)
-        echo "[{$start_page}]";
-    else
-        echo "<a href=\"list.php?page_num={$start_page}\">[{$start_page}]</a>";
-}
-
-if ($page_max > $page_num)
-{
-    $next_page = $page_num + 1;
-    echo "<a href=\"list.php?page_num={$next_page}\">[&rsaquo;]</a>";
-}
-else
-{
-    echo "[&rsaquo;]";
-}
-
-if ($page_max > ($block + 1) * $page_scale)
-{
-    $next_block = ($block + 1) * $page_scale + 1;
-    echo "<a href=\"list.php?page_num={$next_block}\">[&raquo;]</a>";
-}
-else
-{
-    echo "[&raquo;]";
-}
+    $start_page = $block * $page_scale + 1;
+    for($i=1; $i<=$page_scale && $start_page<=$page_max; $i++, $start_page++)
+    {
 ?>
+    <a href="<?=($start_page == $page_num)? "javascript:;":"?page_num={$start_page}"?>"><?=$start_page?></a>
+<?php
+    }
+?>
+<?php $next_page = $page_num + 1; ?>
+    <a href="<?=($page_max > $page_num)? "?page_num={$next_page}":"javascript:;"?>">&rsaquo;</a>
+<?php $next_block = ($block + 1) * $page_scale + 1; ?>
+    <a href="<?=($page_max > ($block + 1)*$page_scale)? "?page_num={$next_block}":"javascript:;"?>">&raquo;</a>
 </p>
 <p class="buttons">
     <a class="btn" href="<?=$path?>compose.php">Post</a>
