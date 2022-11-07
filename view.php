@@ -58,11 +58,11 @@ if ($row['email']!="")
 <p><?=filter($row['content'])?></p>
 
 <p>
-<a href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
-<a href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
-<a href="<?=$path?>compose.php">Post New</a>
-<a href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
-<a href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
+<a class="btn" href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
+<a class="btn" href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
+<a class="btn" href="<?=$path?>compose.php">Post New</a>
+<a class="btn" href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
+<a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
 </p>
 
 <h3 class="sr-only">Prev/Next Post(s)</h3>
