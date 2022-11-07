@@ -78,6 +78,7 @@
 }
 #leaf .post-list tbody td.posted-by {
     text-align: center;
+    width: 120px;
 }
 #leaf .post-list tbody td.date {
     text-align: center;
