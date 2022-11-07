@@ -83,6 +83,7 @@
 #leaf .post-list tbody td.date {
     text-align: center;
     font-size: 0.9em;
+    width: 150px;
 }
 #leaf .post-list tbody td.views {
     text-align: center;
