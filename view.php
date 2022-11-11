@@ -28,9 +28,11 @@ $row = mysqli_fetch_array($result);
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>styles/<?=$skin_name?>/style.css">
 </head>
-<body class="page-view">
-<div id="leaf">
+
+<body>
+<div id="leaf" class="page-view">
 <h1><?=$board_title?></h1>
+<h2>View a Post</h2>
 <dl>
     <dt>Posted by</dt>
     <dd><?=$row['name']?></dd>
@@ -39,7 +41,7 @@ $row = mysqli_fetch_array($result);
 if ($row['email']!="")
 {
 ?>
-    <dt>E-Mail</dt>
+    <dt>E-mail</dt>
     <dd>
         <a href="mailto:<?=$row['email']?>"><?=$row['email']?></a>
     </dd>
@@ -53,7 +55,7 @@ if ($row['email']!="")
     <dt>Views</dt>
     <dd><?=$row['views']?></dd>
 </dl>
-<h2><?=strip_tags($row['title'])?></h2>
+<h3 class="title"><?=strip_tags($row['title'])?></h3>
 <p><?=filter($row['content'])?></p>
 
 <p>
@@ -64,7 +66,7 @@ if ($row['email']!="")
 <a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
 </p>
 
-<h3 class="sr-only">Prev/Next Post(s)</h3>
+<h2 class="sr-only">Prev/Next Post(s)</h2>
 <table class="list">
 <?php
 $query = "SELECT postID, name, title FROM {$board_name} WHERE thread > {$row['thread']} ORDER BY thread ASC LIMIT 1";
@@ -100,7 +102,7 @@ if (isset($next_id['postID']))
 ?>
 </table>
 
-<h3 class="sr-only">Thread and the Related Post(s)</h3>
+<h2 class="sr-only">Thread and the Related Post(s)</h2>
 <?php
 $thread_end = ceil($row['thread']/1000)*1000;
 $thread_start = $thread_end - 1000;
