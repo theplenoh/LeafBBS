@@ -21,7 +21,7 @@ $page_max = ceil($total / $page_size);
 <html>
 <head>
     <meta charset="<?=$charset?>">
-    <title><?=$page_title?> :: <?=$site_title?></title>
+    <title><?=$board_title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>styles/<?=$skin_name?>/style.css">
