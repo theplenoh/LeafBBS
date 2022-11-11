@@ -1,6 +1,5 @@
 <?php
 require_once "common.php";
-$page_title = "List";
 
 require_once $path."db_connect.php";
 
@@ -30,7 +29,7 @@ $page_max = ceil($total / $page_size);
 
 <body>
 <div id="leaf">
-<h1><?=$page_title?> :: <?=$site_title?></h1>
+<h1><?=$board_title?></h1>
 <p class="page-info">
 Total number of posts: <?=$total?><br>
 Page info: <?=$page_num?> / <?=$page_max?>
