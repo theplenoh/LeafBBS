@@ -73,6 +73,7 @@
 #leaf .post-list tbody td.no {
     text-align: center;
     font-size: 0.9em;
+    width: 80px;
 }
 #leaf .post-list tbody td.title {
 }
