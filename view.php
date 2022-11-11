@@ -1,5 +1,5 @@
 <?php
-include_once "common.php";
+require_once "common.php";
 
 require_once $path."db_connect.php";
 
