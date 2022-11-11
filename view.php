@@ -55,15 +55,17 @@ if ($row['email']!="")
     <dt>Views</dt>
     <dd><?=$row['views']?></dd>
 </dl>
-<h3 class="title"><?=strip_tags($row['title'])?></h3>
-<p><?=filter($row['content'])?></p>
+<article>
+    <h3 class="title"><?=strip_tags($row['title'])?></h3>
+    <p><?=filter($row['content'])?></p>
+</article>
 
-<p>
-<a class="btn" href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
-<a class="btn" href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
-<a class="btn" href="<?=$path?>compose.php">Post New</a>
-<a class="btn" href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
-<a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
+<p class="buttons">
+    <a class="btn" href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
+    <a class="btn" href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
+    <a class="btn" href="<?=$path?>compose.php">Post New</a>
+    <a class="btn" href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
+    <a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
 </p>
 
 <h2 class="sr-only">Prev/Next Post(s)</h2>
