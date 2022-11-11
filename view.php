@@ -49,8 +49,8 @@ if ($row['email']!="")
 }
 ?>
 
-    <dt>Date</dt>
-    <dd><?=date("Y-m-d", $row['datetime'])?></dd>
+    <dt>Date/Time</dt>
+    <dd><?=date("Y-m-d H:i", $row['datetime'])?></dd>
 
     <dt>Views</dt>
     <dd><?=$row['views']?></dd>
