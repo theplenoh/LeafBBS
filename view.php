@@ -56,7 +56,7 @@ if ($row['email']!="")
     <dd><?=$row['views']?></dd>
 </dl>
 <article>
-    <h3 class="title"><?=strip_tags($row['title'])?></h3>
+    <h1 class="title"><?=strip_tags($row['title'])?></h1>
     <p><?=filter($row['content'])?></p>
 </article>
 

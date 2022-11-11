@@ -144,7 +144,7 @@
 #leaf.page-view dd {
     line-height: 35px;
 }
-#leaf h3.title {
+#leaf article .title {
     font-size: 1.03rem;
     font-weight: bold;
     line-height: 35px;
