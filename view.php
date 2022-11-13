@@ -68,7 +68,7 @@ if ($row['email']!="")
     <a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
 </section>
 
-<section id="prevnext-posts">
+<section class="prevnext-posts">
     <h2 class="sr-only">Prev/Next Post(s)</h2>
     <table class="list">
 <?php
@@ -106,7 +106,7 @@ if (isset($next_id['postID']))
     </table>
 </section>
 
-<section id="thread">
+<section class="thread">
     <h2 class="sr-only">Thread and the Related Post(s)</h2>
 <?php
 $thread_end = ceil($row['thread']/1000)*1000;
