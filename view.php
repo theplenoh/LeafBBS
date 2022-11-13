@@ -60,16 +60,17 @@ if ($row['email']!="")
     <p><?=filter($row['content'])?></p>
 </article>
 
-<p class="buttons">
+<section class="buttons">
     <a class="btn" href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
     <a class="btn" href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
     <a class="btn" href="<?=$path?>compose.php">Post New</a>
     <a class="btn" href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
     <a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
-</p>
+</section>
 
-<h2 class="sr-only">Prev/Next Post(s)</h2>
-<table class="list">
+<section id="prevnext-posts">
+    <h2 class="sr-only">Prev/Next Post(s)</h2>
+    <table class="list">
 <?php
 $query = "SELECT postID, name, title FROM {$board_name} WHERE thread > {$row['thread']} ORDER BY thread ASC LIMIT 1";
 $result = mysqli_query($conn, $query);
@@ -78,11 +79,11 @@ $prev_id = mysqli_fetch_array($result);
 if (isset($prev_id['postID'])) // If a prev post exists
 {
 ?>
-<tr>
-    <th>Prev</th>
-    <td class="title"><a href="<?=$path?>view.php?post_id=<?=$prev_id['postID']?>"><?=$prev_id['title']?></a></td>
-    <td class="name"><?=$prev_id['name']?></td>
-</tr>
+        <tr>
+            <th>Prev</th>
+            <td class="title"><a href="<?=$path?>view.php?post_id=<?=$prev_id['postID']?>"><?=$prev_id['title']?></a></td>
+            <td class="name"><?=$prev_id['name']?></td>
+        </tr>
 <?php
 }
 ?>
@@ -94,17 +95,19 @@ $next_id = mysqli_fetch_array($result);
 if (isset($next_id['postID']))
 {
 ?>
-<tr>
-    <th>Next</th>
-    <td class="title"><a href="<?=$path?>view.php?post_id=<?=$next_id['postID']?>"><?=$next_id['title']?></a></td>
-    <td class="name"><?=$next_id['name']?></td>
-</tr>
+        <tr>
+            <th>Next</th>
+            <td class="title"><a href="<?=$path?>view.php?post_id=<?=$next_id['postID']?>"><?=$next_id['title']?></a></td>
+            <td class="name"><?=$next_id['name']?></td>
+        </tr>
 <?php
 }
 ?>
-</table>
+    </table>
+</section>
 
-<h2 class="sr-only">Thread and the Related Post(s)</h2>
+<section id="related-posts">
+    <h2 class="sr-only">Thread and the Related Post(s)</h2>
 <?php
 $thread_end = ceil($row['thread']/1000)*1000;
 $thread_start = $thread_end - 1000;
@@ -112,33 +115,33 @@ $thread_start = $thread_end - 1000;
 $query = "SELECT * FROM {$board_name} WHERE thread <= {$thread_end} and thread > {$thread_start} ORDER BY thread DESC";
 $result = mysqli_query($conn, $query);
 ?>
-<table class="list">
-    <tr>
-        <th>Thread</th>
-        <th>Title</th>
-        <th>Posted by</th>
-        <th>Date</th>
-        <th>Views</th>
-    </tr>
+    <table class="list">
+        <tr>
+            <th>Thread</th>
+            <th>Title</th>
+            <th>Posted by</th>
+            <th>Date</th>
+            <th>Views</th>
+        </tr>
 <?php
 while($row = mysqli_fetch_array($result))
 {
 ?>
-    <tr>
-        <td class="no">
-            <?=($row['depth']==0)?"Orig.":"-"?>
-        </td>
-        <td class="title">
-            <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
-                <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
-            </span>
-        </td>
-        <td class="posted-by">
+        <tr>
+            <td class="no">
+                <?=($row['depth']==0)?"Orig.":"-"?>
+            </td>
+            <td class="title">
+                <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
+                    <?php if ($row['depth'] > 0) echo "└ ";?><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
+                </span>
+            </td>
+            <td class="posted-by">
 <?php
 if ($row['email']!="")
 {
 ?>
-            <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
+                <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
 <?php
 }
 else
@@ -148,19 +151,20 @@ else
 <?php
 }
 ?>
-        </td>
-        <td class="date">
-            <span><?=date("Y-m-d", $row['datetime'])?></span>
-        </td>
-        <td class="views">
-            <span><?=$row['views']?></span>
-        </td>
-    </tr>
+            </td>
+            <td class="date">
+                <span><?=date("Y-m-d", $row['datetime'])?></span>
+            </td>
+            <td class="views">
+                <span><?=$row['views']?></span>
+            </td>
+        </tr>
 <?php
 }
 mysqli_close($conn);
 ?>
-</table>
+    </table>
+</section>
 </div>
 </body>
 </html>
