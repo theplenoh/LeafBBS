@@ -54,6 +54,14 @@
     margin: 1.5rem 0;
 }
 
+#leaf .prevnext-posts {
+    margin: 1.5rem 0;
+}
+
+#leaf .thread {
+    margin: 1.5rem 0;
+}
+
 /** Modules **/
 #leaf .post-list th, 
 #leaf .post-list td {
