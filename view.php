@@ -106,7 +106,7 @@ if (isset($next_id['postID']))
     </table>
 </section>
 
-<section id="related-posts">
+<section id="thread">
     <h2 class="sr-only">Thread and the Related Post(s)</h2>
 <?php
 $thread_end = ceil($row['thread']/1000)*1000;
