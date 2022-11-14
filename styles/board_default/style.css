@@ -63,6 +63,7 @@
     }
 
 /** Modules **/
+    /* post list */
     #leaf .post-list th, 
     #leaf .post-list td {
         vertical-align: middle;
