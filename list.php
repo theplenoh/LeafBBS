@@ -30,10 +30,11 @@ $page_max = ceil($total / $page_size);
 <body>
 <div id="leaf">
 <h1><?=$board_title?></h1>
-<p class="page-info">
+<section class="page-info">
 Total number of posts: <?=$total?><br>
 Page info: <?=$page_num?> / <?=$page_max?>
-</p>
+</section>
+<main>
 <table class="post-list">
 <caption class="sr-only">List of postings</caption>
 <thead>
@@ -108,7 +109,8 @@ mysqli_close($conn);
 ?>
 </tbody>
 </table>
-<p class="pagination">
+</main>
+<section class="pagination">
 <?php $prev_block = ($block - 1) * $page_scale + 1; ?>
     <a href="<?=($block > 0)? "?page_num={$prev_block}":"javascript:;"?>">&laquo;</a>
 <?php $prev_page = $page_num - 1; ?>
@@ -126,10 +128,10 @@ mysqli_close($conn);
     <a href="<?=($page_max > $page_num)? "?page_num={$next_page}":"javascript:;"?>">&rsaquo;</a>
 <?php $next_block = ($block + 1) * $page_scale + 1; ?>
     <a href="<?=($page_max > ($block + 1)*$page_scale)? "?page_num={$next_block}":"javascript:;"?>">&raquo;</a>
-</p>
-<p class="buttons">
+</section>
+<section class="buttons">
     <a class="btn" href="<?=$path?>compose.php">Post</a>
-</p>
+</section>
 </div>
 </body>
 </html>
