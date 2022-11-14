@@ -4,7 +4,7 @@
 
 /** Common **/
     #leaf {
-        margin: 1rem;
+        padding: 1rem;
         /*width: 750px;*/
     }
     .sr-only {
@@ -185,6 +185,37 @@
         #leaf .prevnext-posts .name {
             width: 105px;
             text-align: center;
+        }
+        /* thread */
+        #leaf .thread .list {
+            width: 100%;
+            border-top: 1px solid #dfdfdf;
+        }
+        #leaf .thread tr {
+            height: 35px;
+            border-bottom: 1px solid #dfdfdf;
+        }
+        #leaf .thread th, 
+        #leaf .thread td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        #leaf .thread .no {
+            width: 80px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #leaf .thread .title {
+            text-align: left;
+        }
+        #leaf .thread .posted-by {
+            width: 120px;
+        }
+        #leaf .thread .date {
+            width: 150px;
+        }
+        #leaf .thread .views {
+            width: 110px;
         }
 
         /* buttons */
