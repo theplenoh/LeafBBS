@@ -32,6 +32,7 @@ $row = mysqli_fetch_array($result);
 <body>
 <div id="leaf" class="page-view">
 <h1><?=$board_title?></h1>
+<main>
 <h2>View a Post</h2>
 <dl>
     <dt>Posted by</dt>
@@ -59,6 +60,7 @@ if ($row['email']!="")
     <h1 class="title"><?=strip_tags($row['title'])?></h1>
     <p><?=filter($row['content'])?></p>
 </article>
+</main>
 
 <section class="buttons">
     <a class="btn" href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
