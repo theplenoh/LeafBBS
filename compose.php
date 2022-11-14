@@ -43,9 +43,9 @@ require_once "common.php";
             <textarea name="content" id="content"></textarea>
         </dd>
     </dl>
-    <p>
-        <button type="submit">Submit</button>
-        <a href="<?=$path?>list.php">List</a>
+    <p class="buttons">
+        <button type="submit" class="btn">Post</button>
+        <a href="<?=$path?>list.php" class="btn">List</a>
     </p>
     </form>
 </main>
