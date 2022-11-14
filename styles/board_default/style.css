@@ -229,6 +229,9 @@
         color: #000;
         text-decoration: none;
     }
+    #leaf button.btn {
+        font-size: inherit;
+    }
     #leaf .btn:hover {
         background-color: #e2e6ea;
         border: 1px solid #dae0e5;
