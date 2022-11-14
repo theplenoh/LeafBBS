@@ -1,6 +1,5 @@
 <?php
 require_once "common.php";
-$page_title = "Compose";
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +13,7 @@ $page_title = "Compose";
 
 <body>
 <div id="leaf">
-<h1><?=$page_title?> :: <?=$site_title?></h1>
+<h1><?=$board_title?></h1>
 <form action="<?=$path?>insert.php" method="post">
 <dl>
     <dt><label for="name">Name</label></dt>
