@@ -24,10 +24,12 @@ require_once "common.php";
         </dd>
         <dt><label for="passwd">Password</label></dt>
         <dd>
-            <p class="warning">
+            <div class="warning">
+                <small>
                 Enter a temporary password.<br>
                 (Needed later for editing/deleting this post)
-            </p>
+                </small>
+            </div>
             <input type="password" name="password" id="password" maxlength="16">
         </dd>
         <dt><label for="email">E-mail</label></dt>
