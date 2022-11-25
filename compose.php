@@ -46,7 +46,7 @@ require_once "common.php";
         </dd>
     </dl>
     <p class="buttons">
-        <button type="submit" class="btn">Post</button>
+        <input type="submit" class="btn" value="Post">
         <a href="<?=$path?>list.php" class="btn">List</a>
     </p>
     </form>
