@@ -64,179 +64,187 @@
 
 /** Modules **/
     /* post list */
-    #leaf .post-list th, 
-    #leaf .post-list td {
-        vertical-align: middle;
-    }
-    #leaf .post-list thead tr {
-        border-top: 1px solid #dfdfdf;
-        border-bottom: 1px solid #dfdfdf;
-        height: 35px;
-    }
-    #leaf .post-list tbody tr {
-        height: 35px;
-        border-bottom: 1px solid #dfdfdf;
-    }
-    #leaf .post-list tbody td.no {
-        text-align: center;
-        font-size: 0.9rem;
-        width: 80px;
-    }
-    #leaf .post-list tbody td.title {
-    }
-    #leaf .post-list tbody td.posted-by {
-        text-align: center;
-        width: 120px;
-    }
-    #leaf .post-list tbody td.date {
-        text-align: center;
-        font-size: 0.9rem;
-        width: 150px;
-    }
-    #leaf .post-list tbody td.views {
-        text-align: center;
-        font-size: 0.9rem;
-        width: 110px;
-    }
+        #leaf .post-list th, 
+        #leaf .post-list td {
+            vertical-align: middle;
+        }
+        #leaf .post-list thead tr {
+            border-top: 1px solid #dfdfdf;
+            border-bottom: 1px solid #dfdfdf;
+            height: 35px;
+        }
+        #leaf .post-list tbody tr {
+            height: 35px;
+            border-bottom: 1px solid #dfdfdf;
+        }
+        #leaf .post-list tbody td.no {
+            text-align: center;
+            font-size: 0.9rem;
+            width: 80px;
+        }
+        #leaf .post-list tbody td.title {
+        }
+        #leaf .post-list tbody td.posted-by {
+            text-align: center;
+            width: 120px;
+        }
+        #leaf .post-list tbody td.date {
+            text-align: center;
+            font-size: 0.9rem;
+            width: 150px;
+        }
+        #leaf .post-list tbody td.views {
+            text-align: center;
+            font-size: 0.9rem;
+            width: 110px;
+        }
 
     /* pagination */
-    #leaf .pagination {
-        text-align: center;
-        font-size: 0;
-    }
-    #leaf .pagination a {
-        display: inline-block;
-        padding: 0.25rem 0.60rem;
-        border: 1px solid #dee2e6;
-        border-right: 0 none;
-        line-height: 27px;
-        font-size: 15px;
-    }
-    #leaf .pagination a:hover {
-        text-decoration: none;
-        background-color: #eeeeee;
-    }
-    #leaf .pagination a:first-child {
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-    #leaf .pagination a:last-child {
-        border-right: 1px solid #dee2e6;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
+        #leaf .pagination {
+            text-align: center;
+            font-size: 0;
+        }
+        #leaf .pagination a {
+            display: inline-block;
+            padding: 0.25rem 0.60rem;
+            border: 1px solid #dee2e6;
+            border-right: 0 none;
+            line-height: 27px;
+            font-size: 15px;
+        }
+        #leaf .pagination a:hover {
+            text-decoration: none;
+            background-color: #eeeeee;
+        }
+        #leaf .pagination a:first-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        #leaf .pagination a:last-child {
+            border-right: 1px solid #dee2e6;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
 
     /* post view */
-    #leaf h2 {
-        font-size: 1.2rem;
-        padding: 0 0.6rem;
-        border-top: 1px solid #dfdfdf;
-        border-bottom: 1px solid #dfdfdf;
-        background-color: #f7f7f7;
-        line-height: 35px;
-    }
-    #leaf.page-view dt {
-        display: inline-block;
-    }
-    #leaf.page-view dt::after {
-        content: ': ';
-    }
-    #leaf.page-view dd {
-        display: inline-block;
-        margin-right: 1rem;
-    }
-    #leaf.page-view dl {
-        padding: 0 0.5rem;
-        border-bottom: 1px solid #dfdfdf;
-    }
-    #leaf.page-view dt, 
-    #leaf.page-view dd {
-        line-height: 35px;
-    }
-    #leaf article .title {
-        font-size: 1.03rem;
-        font-weight: bold;
-        line-height: 35px;
-    }
-    #leaf.page-view article {
-        padding: 0.6rem;
-        border-bottom: 1px solid #dfdfdf;
-    }
-    #leaf.page-view article p {
-        margin: 0.5rem 0;
-    }
+        #leaf h2 {
+            font-size: 1.2rem;
+            padding: 0 0.6rem;
+            border-top: 1px solid #dfdfdf;
+            border-bottom: 1px solid #dfdfdf;
+            background-color: #f7f7f7;
+            line-height: 35px;
+        }
+        #leaf.page-view dt {
+            display: inline-block;
+        }
+        #leaf.page-view dt::after {
+            content: ': ';
+        }
+        #leaf.page-view dd {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        #leaf.page-view dl {
+            padding: 0 0.5rem;
+            border-bottom: 1px solid #dfdfdf;
+        }
+        #leaf.page-view dt, 
+        #leaf.page-view dd {
+            line-height: 35px;
+        }
+        #leaf article .title {
+            font-size: 1.03rem;
+            font-weight: bold;
+            line-height: 35px;
+        }
+        #leaf.page-view article {
+            padding: 0.6rem;
+            border-bottom: 1px solid #dfdfdf;
+        }
+        #leaf.page-view article p {
+            margin: 0.5rem 0;
+        }
 
     /* prevnext-posts */
-    #leaf .prevnext-posts .list {
-        width: 100%;
-        border-top: 1px solid #dfdfdf;
-    }
-    #leaf .prevnext-posts tr {
-        height: 35px;
-        border-bottom: 1px solid #dfdfdf;
-    }
-    #leaf .prevnext-posts th {
-        width: 60px;
-        text-align: center;
-        vertical-align: middle;
-    }
-    #leaf .prevnext-posts td {
-        vertical-align: middle;
-    }
-    #leaf .prevnext-posts .name {
-        width: 105px;
-        text-align: center;
-    }
+        #leaf .prevnext-posts .list {
+            width: 100%;
+            border-top: 1px solid #dfdfdf;
+        }
+        #leaf .prevnext-posts tr {
+            height: 35px;
+            border-bottom: 1px solid #dfdfdf;
+        }
+        #leaf .prevnext-posts th {
+            width: 60px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #leaf .prevnext-posts td {
+            vertical-align: middle;
+        }
+        #leaf .prevnext-posts .name {
+            width: 105px;
+            text-align: center;
+        }
 
     /* thread */
-    #leaf .thread .list {
-        width: 100%;
-        border-top: 1px solid #dfdfdf;
-    }
-    #leaf .thread tr {
-        height: 35px;
-        border-bottom: 1px solid #dfdfdf;
-    }
-    #leaf .thread th, 
-    #leaf .thread td {
-        text-align: center;
-        vertical-align: middle;
-    }
-    #leaf .thread .no {
-        width: 80px;
-        text-align: center;
-        vertical-align: middle;
-    }
-    #leaf .thread .title {
-        text-align: left;
-    }
-    #leaf .thread .posted-by {
-        width: 120px;
-    }
-    #leaf .thread .date {
-        width: 150px;
-    }
-    #leaf .thread .views {
-        width: 110px;
-    }
+        #leaf .thread .list {
+            width: 100%;
+            border-top: 1px solid #dfdfdf;
+        }
+        #leaf .thread tr {
+            height: 35px;
+            border-bottom: 1px solid #dfdfdf;
+        }
+        #leaf .thread th, 
+        #leaf .thread td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        #leaf .thread .no {
+            width: 80px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #leaf .thread .title {
+            text-align: left;
+        }
+        #leaf .thread .posted-by {
+            width: 120px;
+        }
+        #leaf .thread .date {
+            width: 150px;
+        }
+        #leaf .thread .views {
+            width: 110px;
+        }
 
     /* buttons */
-    #leaf .btn {
-        background-color: #f7f7f7;
-        border: 1px solid #dfdfdf;
-        border-radius: 4px;
-        padding: 0.35rem 1.0rem;
-        color: #000;
-        text-decoration: none;
+        #leaf .btn {
+            background-color: #f7f7f7;
+            border: 1px solid #dfdfdf;
+            border-radius: 4px;
+            padding: 0.35rem 1.0rem;
+            color: #000;
+            text-decoration: none;
+        }
+        #leaf button.btn {
+            font-size: inherit;
+        }
+        #leaf .btn:hover {
+            background-color: #e2e6ea;
+            border: 1px solid #dae0e5;
+            color: #000;
+            text-decoration: none;
+        }
+
+    /* compose, edit, reply form */
+    #leaf dl {
+        padding: 0.5rem;
     }
-    #leaf button.btn {
-        font-size: inherit;
-    }
-    #leaf .btn:hover {
-        background-color: #e2e6ea;
-        border: 1px solid #dae0e5;
-        color: #000;
-        text-decoration: none;
+    #leaf dd {
+        margin-bottom: 0.5rem;
     }
 
 /** Specifics **/
