@@ -262,6 +262,7 @@
     /* compose, edit, reply form */
         #leaf dl {
             padding: 0.5rem;
+            border-bottom: 1px solid #dfdfdf;
         }
         #leaf form dd {
             margin-bottom: 0.5rem;
