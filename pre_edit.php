@@ -50,7 +50,7 @@ $row = mysqli_fetch_array($result);
         </dd>
     </dl>
     <p class="buttons">
-        <input class="btn" type="submit" value="Submit">
+        <input class="btn" type="submit" value="Edit">
         <a class="btn" href="<?=$path?>view.php?post_id=<?=$postID?>">Cancel</a>
     </p>
     </form>
