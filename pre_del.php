@@ -19,7 +19,7 @@ $postID = $_GET['post_id'];
 <div id="leaf">
 <h1><?=$board_title?></h1>
 <main>
-    <h2>Password Confirm before Deleting</h2>
+    <h2>Confirm before Deleting</h2>
     <form action="<?=$path?>del.php?post_id=<?=$postID?>" method="post">
     <dl>
         <dt>Password</dt>
