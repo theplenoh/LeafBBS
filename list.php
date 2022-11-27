@@ -73,8 +73,8 @@ else
             <?=$postIdx?>
         </td>
         <td class="title">
-            <span style="margin-left: <?php if ($row['depth'] > 0) echo $row['depth']*7;?>px;">
-                <?php if ($row['depth'] > 0) echo "└";?><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
+            <span style="padding-left: <?php echo ($row['depth'] > 0)? ($row['depth']*7):0; echo 'px;'; ?>">
+                <?php if ($row['depth'] > 0) echo "<img src=\"{$path}images/arrow-return-right.svg\" height=\"12\" style=\"margin-right: 4px;\">";?><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a>
             </span>
         </td>
         <td class="posted-by">
