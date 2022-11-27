@@ -110,7 +110,7 @@ mysqli_close($conn);
 </tbody>
 </table>
 </main>
-<section class="pagination">
+<p class="pagination">
 <?php $prev_block = ($block - 1) * $page_scale + 1; ?>
     <a href="<?=($block > 0)? "?page_num={$prev_block}":"javascript:;"?>">&laquo;</a>
 <?php $prev_page = $page_num - 1; ?>
@@ -128,7 +128,7 @@ mysqli_close($conn);
     <a href="<?=($page_max > $page_num)? "?page_num={$next_page}":"javascript:;"?>">&rsaquo;</a>
 <?php $next_block = ($block + 1) * $page_scale + 1; ?>
     <a href="<?=($page_max > ($block + 1)*$page_scale)? "?page_num={$next_block}":"javascript:;"?>">&raquo;</a>
-</section>
+</p>
 <section class="buttons">
     <a class="btn" href="<?=$path?>compose.php">Post</a>
 </section>
