@@ -222,12 +222,15 @@
 
     /* buttons */
         #leaf .btn {
+            display: inline-block;
             background-color: #f7f7f7;
             border: 1px solid #dfdfdf;
             border-radius: 4px;
-            padding: 0.35rem 1.0rem;
+            padding: 0rem 1.0rem;
+            line-height: 30px;
             color: #000;
             text-decoration: none;
+            vertical-align: middle;
         }
         #leaf button.btn {
             font-size: 15px;
