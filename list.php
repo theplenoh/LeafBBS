@@ -30,10 +30,10 @@ $page_max = ceil($total / $page_size);
 <body>
 <div id="leaf">
 <h1><?=$board_title?></h1>
-<section class="page-info">
+<p class="page-info">
 Total number of posts: <?=$total?><br>
 Page info: <?=$page_num?> / <?=$page_max?>
-</section>
+</p>
 <main>
 <table class="post-list">
 <caption class="sr-only">List of postings</caption>
