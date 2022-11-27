@@ -129,9 +129,9 @@ mysqli_close($conn);
 <?php $next_block = ($block + 1) * $page_scale + 1; ?>
     <a href="<?=($page_max > ($block + 1)*$page_scale)? "?page_num={$next_block}":"javascript:;"?>">&raquo;</a>
 </p>
-<section class="buttons">
+<p class="buttons">
     <a class="btn" href="<?=$path?>compose.php">Post</a>
-</section>
+</p>
 </div>
 </body>
 </html>
