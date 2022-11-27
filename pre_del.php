@@ -28,7 +28,7 @@ $postID = $_GET['post_id'];
         </dd>
     </dl>
     <p class="buttons">
-        <input type="submit" class="btn" value="Delete">
+        <button class="btn" type="submit">Delete</button>
         <a href="<?=$path?>view.php?post_id=<?=$postID?>" class="btn">Cancel</a>
     </p>
     </form>

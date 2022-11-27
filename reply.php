@@ -59,7 +59,7 @@ $parent_content = "\n&gt;".str_replace("\n", "\n&gt;", $parent_row['content']);
         </dd>
     </dl>
     <p class="buttons">
-        <input class="btn" type="submit" value="Reply">
+        <button class="btn" type="submit">Reply</button>
         <a class="btn" href="<?=$path?>view.php?post_id=<?=$postID?>">Cancel</a>
     </p>
     </form>
