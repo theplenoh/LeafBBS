@@ -229,8 +229,7 @@
             color: #000;
             text-decoration: none;
         }
-        #leaf input[type=submit].btn {
-            padding-top: calc(0.35rem - 1px);
+        #leaf button.btn {
             font-size: 15px;
         }
         #leaf .btn:hover {
