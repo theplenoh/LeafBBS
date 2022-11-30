@@ -64,12 +64,14 @@
 
 /** Modules **/
     /* post list */
+        #leaf .post-list {
+            border-top: 1px solid #dfdfdf;
+        }
         #leaf .post-list th, 
         #leaf .post-list td {
             vertical-align: middle;
         }
         #leaf .post-list thead tr {
-            border-top: 1px solid #dfdfdf;
             border-bottom: 1px solid #dfdfdf;
             height: 35px;
         }
