@@ -6,7 +6,7 @@ $board_title = "Test Board";
 
 $board_name = "leaf_board";
 
-$skin_name = "board_default";
+$theme_name = "board_default";
 
 // Encoding
 header("Content-Type: text/html; charset={$charset}");

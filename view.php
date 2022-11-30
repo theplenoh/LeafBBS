@@ -26,7 +26,7 @@ $row = mysqli_fetch_array($result);
     <title><?=$board_title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="<?=$path?>styles/<?=$skin_name?>/style.css">
+    <link rel="stylesheet" type="text/css" href="<?=$path?>themes/<?=$theme_name?>/style.css">
 </head>
 
 <body>
