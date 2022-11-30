@@ -257,6 +257,11 @@
         #leaf .thread .title {
             text-align: left;
         }
+        #leaf .thread .title .reply {
+            padding-left: 16px;
+            background: transparent url('images/arrow-return-right.svg') no-repeat 0 50%;
+            background-size: 12px;
+        }
         #leaf .thread .posted-by {
             width: 120px;
         }
