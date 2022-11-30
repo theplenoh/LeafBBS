@@ -84,7 +84,10 @@
             font-size: 0.9rem;
             width: 80px;
         }
-        #leaf .post-list tbody td.title {
+        #leaf .post-list tbody td.title .reply {
+            padding-left: 16px;
+            background: transparent url('images/arrow-return-right.svg') no-repeat 0 50%;
+            background-size: 12px;
         }
         #leaf .post-list tbody td.posted-by {
             text-align: center;
