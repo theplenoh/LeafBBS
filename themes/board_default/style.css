@@ -114,6 +114,10 @@
             border: 0;
             clip: rect(0, 0, 0, 0);
         }
+        #leaf .post-list tbody tr {
+            display: block;
+            padding: 0.45rem;
+        }
         #leaf .post-list .no {
             position: absolute;
             width: 1px;
@@ -127,6 +131,7 @@
 
         #leaf .post-list .title {
             display: block;
+            line-height: 1.3rem;
         }
         #leaf .post-list tbody td.posted-by, 
         #leaf .post-list tbody td.date, 
@@ -139,18 +144,21 @@
             padding-left: 1rem;
             background: transparent url('images/person.svg') no-repeat 0 50%;
             background-size: 15px;
+            font-size: 0.85rem;
         }
         #leaf .post-list tbody td.date {
             margin-right: 0.45rem;
             padding-left: 1rem;
             background: transparent url('images/calendar-minus.svg') no-repeat 0 50%;
             background-size: 14px;
+            font-size: 0.85rem;
         }
         #leaf .post-list tbody td.views {
             margin-right: 0.45rem;
             padding-left: 1rem;
             background: transparent url('images/eye.svg') no-repeat 0 50%;
             background-size: 14px;
+            font-size: 0.85rem;
         }
     }
 
