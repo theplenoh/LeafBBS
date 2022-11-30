@@ -100,6 +100,24 @@
             font-size: 0.9rem;
             width: 110px;
         }
+    @media screen and (max-width: 567px) {
+        #leaf .post-list thead {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            margin: -1px;
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+        }
+    }
+
+    @media screen and (min-width: 568px) and (max-width: 768px) {
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    }
 
     /* pagination */
         #leaf .pagination {
