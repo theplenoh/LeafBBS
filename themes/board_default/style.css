@@ -455,6 +455,7 @@
             padding: 0.25rem;
             border: 1px solid #d0d7de;
             border-radius: 4px;
+            font-size: 16px;
         }
         #leaf input[type=text], 
         #leaf input[type=password] {
@@ -465,6 +466,16 @@
             height: 10rem;
             resize: vertical;
         }
+    @media screen and (max-width: 567px) {
+        #leaf input[type=text], 
+        #leaf input[type=password] {
+            width: 14rem;
+        }
+    }
+    @media screen and (min-width: 568px) and (max-width: 768px) {
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    }
 
     /* compose, edit, reply form */
         #leaf dl {
