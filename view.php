@@ -36,14 +36,14 @@ $row = mysqli_fetch_array($result);
 <h2>View a Post</h2>
 <dl>
     <dt>Posted by</dt>
-    <dd><?=$row['name']?></dd>
+    <dd class="posted-by"><?=$row['name']?></dd>
 
 <?php
 if ($row['email']!="")
 {
 ?>
     <dt>E-mail</dt>
-    <dd>
+    <dd class="email">
         <a href="mailto:<?=$row['email']?>"><?=$row['email']?></a>
     </dd>
 <?php
@@ -51,10 +51,10 @@ if ($row['email']!="")
 ?>
 
     <dt>Date/Time</dt>
-    <dd><?=date("Y-m-d H:i", $row['datetime'])?></dd>
+    <dd class="date-time"><?=date("Y-m-d H:i", $row['datetime'])?></dd>
 
     <dt>Views</dt>
-    <dd><?=$row['views']?></dd>
+    <dd class="views"><?=$row['views']?></dd>
 </dl>
 <article>
     <h1 class="title"><?=strip_tags($row['title'])?></h1>
@@ -118,30 +118,33 @@ $query = "SELECT * FROM {$board_name} WHERE thread <= {$thread_end} and thread >
 $result = mysqli_query($conn, $query);
 ?>
     <table class="list">
-        <tr>
-            <th>Thread</th>
-            <th>Title</th>
-            <th>Posted by</th>
-            <th>Date</th>
-            <th>Views</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Thread</th>
+                <th>Title</th>
+                <th>Posted by</th>
+                <th>Date</th>
+                <th>Views</th>
+            </tr>
+        </thead>
+        <tbody>
 <?php
 while($row = mysqli_fetch_array($result))
 {
 ?>
-        <tr>
-            <td class="no">
-                <?=($row['depth']==0)?"Orig.":"-"?>
-            </td>
-            <td class="title">
-                <span <?php if ($row['depth'] > 0) { echo "class=\"reply\""; } ?>style="margin-left: <?php if ($row['depth'] > 0) { echo ($row['depth']*7).'px; '; } else { echo '0px; '; } ?>"><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a></span>
-            </td>
-            <td class="posted-by">
+            <tr>
+                <td class="no">
+                    <?=($row['depth']==0)?"Orig.":"-"?>
+                </td>
+                <td class="title">
+                    <span <?php if ($row['depth'] > 0) { echo "class=\"reply\" "; } ?>style="margin-left: <?php if ($row['depth'] > 0) { echo ($row['depth']*7).'px; '; } else { echo '0px; '; } ?>"><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a></span>
+                </td>
+                <td class="posted-by">
 <?php
 if ($row['email']!="")
 {
 ?>
-                <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
+                    <a href="mailto:<?=$row['email']?>"><?=$row['name']?></a>
 <?php
 }
 else
@@ -151,18 +154,19 @@ else
 <?php
 }
 ?>
-            </td>
-            <td class="date">
-                <span><?=date("Y-m-d", $row['datetime'])?></span>
-            </td>
-            <td class="views">
-                <span><?=$row['views']?></span>
-            </td>
-        </tr>
+                </td>
+                <td class="date">
+                    <span><?=date("Y-m-d", $row['datetime'])?></span>
+                </td>
+                <td class="views">
+                    <span><?=$row['views']?></span>
+                </td>
+            </tr>
 <?php
 }
 mysqli_close($conn);
 ?>
+        </tbody>
     </table>
 </section>
 </div>

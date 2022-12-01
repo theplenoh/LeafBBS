@@ -152,7 +152,7 @@
             margin-right: 0.45rem;
             padding-left: 1rem;
             background: transparent url('images/calendar-minus.svg') no-repeat 0 50%;
-            background-size: 14px;
+            background-size: 13px;
             font-size: 0.85rem;
         }
         #leaf .post-list tbody td.views {
@@ -163,10 +163,8 @@
             font-size: 0.85rem;
         }
     }
-
     @media screen and (min-width: 568px) and (max-width: 768px) {
     }
-
     @media screen and (min-width: 769px) and (max-width: 1279px) {
     }
 
@@ -236,6 +234,46 @@
         #leaf.page-view article p {
             margin: 0.5rem 0;
         }
+    @media screen and (max-width: 567px) {
+        #leaf.page-view dt {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            margin: -1px;
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+        }
+        #leaf.page-view dd.posted-by {
+            padding-left: 1rem;
+            background: transparent url('images/person.svg') no-repeat 0 50%;
+            background-size: 15px;
+            font-size: 0.85rem;
+        }
+        #leaf.page-view dd.email {
+            padding-left: 1rem;
+            background: transparent url('images/envelope.svg') no-repeat 0 50%;
+            background-size: 14px;
+            font-size: 0.85rem;
+        }
+        #leaf.page-view dd.date-time {
+            padding-left: 1rem;
+            background: transparent url('images/calendar-minus.svg') no-repeat 0 calc(50% - 1px);
+            background-size: 13px;
+            font-size: 0.85rem;
+        }
+        #leaf.page-view dd.views {
+            padding-left: 1rem;
+            background: transparent url('images/eye.svg') no-repeat 0 50%;
+            background-size: 14px;
+            font-size: 0.85rem;
+        }
+    }
+    @media screen and (min-width: 568px) and (max-width: 768px) {
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    }
 
     /* prevnext-posts */
         #leaf .prevnext-posts .list {
@@ -258,6 +296,20 @@
             width: 105px;
             text-align: center;
         }
+    @media screen and (max-width: 567px) {
+        #leaf .prevnext-posts th {
+            width: 50px;
+            font-size: 0.85rem;
+        }
+        #leaf .prevnext-posts .name {
+            width: 95px;
+            font-size: 0.85rem;
+        }
+    }
+    @media screen and (min-width: 568px) and (max-width: 768px) {
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    }
 
     /* thread */
         #leaf .thread .list {
@@ -295,6 +347,69 @@
         #leaf .thread .views {
             width: 110px;
         }
+    @media screen and (max-width: 567px) {
+        #leaf .thread thead {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            margin: -1px;
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+        }
+        #leaf .thread tbody tr {
+            display: block;
+            padding: 0.45rem;
+            text-align: right;
+        }
+        #leaf .thread .no {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            margin: -1px;
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+        }
+        #leaf .thread .title {
+            display: block;
+            text-align: left;
+            line-height: 1.3rem;
+        }
+        #leaf .thread tbody td.posted-by, 
+        #leaf .thread tbody td.date, 
+        #leaf .thread tbody td.views {
+            display: inline-block;
+            width: auto;
+        }
+        #leaf .thread tbody td.posted-by {
+            margin-right: 0.45rem;
+            padding-left: 1rem;
+            background: transparent url('images/person.svg') no-repeat 0 50%;
+            background-size: 15px;
+            font-size: 0.85rem;
+        }
+        #leaf .thread tbody td.date {
+            margin-right: 0.45rem;
+            padding-left: 1rem;
+            background: transparent url('images/calendar-minus.svg') no-repeat 0 50%;
+            background-size: 13px;
+            font-size: 0.85rem;
+        }
+        #leaf .thread tbody td.views {
+            margin-right: 0.45rem;
+            padding-left: 1rem;
+            background: transparent url('images/eye.svg') no-repeat 0 50%;
+            background-size: 14px;
+            font-size: 0.85rem;
+        }
+    }
+    @media screen and (min-width: 568px) and (max-width: 768px) {
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    }
 
     /* buttons */
         #leaf .btn {
@@ -317,6 +432,20 @@
             color: #000;
             text-decoration: none;
         }
+    @media screen and (max-width: 567px) {
+        #leaf .btn {
+            padding: 0 0.45rem;
+            line-height: 28px;
+            font-size: 14px;
+        }
+        #leaf button.btn {
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 568px) and (max-width: 768px) {
+    }
+    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    }
 
     /* input fields */
         #leaf input[type=text], 
