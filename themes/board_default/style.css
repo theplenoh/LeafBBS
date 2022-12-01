@@ -21,7 +21,7 @@
 /** Typography **/
     #leaf {
         font-family: sans-serif;
-        font-size: 15px;
+        font-size: 16px;
     }
     #leaf h1 {
         font-size: 2rem;
@@ -179,7 +179,7 @@
             border: 1px solid #dee2e6;
             border-right: 0 none;
             line-height: 27px;
-            font-size: 15px;
+            font-size: 16px;
         }
         #leaf .pagination a:hover {
             text-decoration: none;
@@ -424,7 +424,7 @@
             vertical-align: middle;
         }
         #leaf button.btn {
-            font-size: 15px;
+            font-size: 16px;
         }
         #leaf .btn:hover {
             background-color: #e2e6ea;
