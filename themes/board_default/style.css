@@ -316,6 +316,9 @@
         }
     }
     @media screen and (min-width: 568px) and (max-width: 1024px) {
+        #leaf .prevnext-posts th {
+            font-size: 0.9rem;
+        }
     }
 
     /* thread */
@@ -336,6 +339,7 @@
             width: 80px;
             text-align: center;
             vertical-align: middle;
+            font-size: 0.9rem;
         }
         #leaf .thread .title {
             text-align: left;
@@ -350,9 +354,11 @@
         }
         #leaf .thread .date {
             width: 150px;
+            font-size: 0.9rem;
         }
         #leaf .thread .views {
             width: 110px;
+            font-size: 0.9rem;
         }
     @media screen and (max-width: 567px) {
         #leaf .thread thead {
@@ -414,6 +420,18 @@
         }
     }
     @media screen and (min-width: 568px) and (max-width: 1024px) {
+        #leaf .thread tbody td.no {
+            width: 70px;
+        }
+        #leaf .thread tbody td.posted-by {
+            width: 120px;
+        }
+        #leaf .thread tbody td.date {
+            width: 90px;
+        }
+        #leaf .thread tbody td.views {
+            width: 65px;
+        }
     }
 
     /* buttons */
