@@ -5,6 +5,7 @@
 /** Common **/
     #leaf {
         padding: 1rem;
+        -webkit-text-size-adjust: 100%;
         /*width: 750px;*/
     }
     .sr-only {
