@@ -163,9 +163,19 @@
             font-size: 0.85rem;
         }
     }
-    @media screen and (min-width: 568px) and (max-width: 768px) {
-    }
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
+        #leaf .post-list tbody td.no {
+            width: 70px;
+        }
+        #leaf .post-list tbody td.posted-by {
+            width: 120px;
+        }
+        #leaf .post-list tbody td.date {
+            width: 90px;
+        }
+        #leaf .post-list tbody td.views {
+            width: 60px;
+        }
     }
 
     /* pagination */
@@ -270,9 +280,7 @@
             font-size: 0.85rem;
         }
     }
-    @media screen and (min-width: 568px) and (max-width: 768px) {
-    }
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
     }
 
     /* prevnext-posts */
@@ -306,9 +314,7 @@
             font-size: 0.85rem;
         }
     }
-    @media screen and (min-width: 568px) and (max-width: 768px) {
-    }
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
     }
 
     /* thread */
@@ -406,9 +412,7 @@
             font-size: 0.85rem;
         }
     }
-    @media screen and (min-width: 568px) and (max-width: 768px) {
-    }
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
     }
 
     /* buttons */
@@ -442,9 +446,7 @@
             font-size: 14px;
         }
     }
-    @media screen and (min-width: 568px) and (max-width: 768px) {
-    }
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
     }
 
     /* input fields */
@@ -472,9 +474,7 @@
             width: 14rem;
         }
     }
-    @media screen and (min-width: 568px) and (max-width: 768px) {
-    }
-    @media screen and (min-width: 769px) and (max-width: 1279px) {
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
     }
 
     /* compose, edit, reply form */
