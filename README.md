@@ -1,4 +1,5 @@
 # LeafBBS
+LeafBBS--a Responsive Web BBS from its Cradle
 
 LeafBBS is a bullet-in board system(BBS) written in PHP.  
 It is designed to run in LAMP server environment.
