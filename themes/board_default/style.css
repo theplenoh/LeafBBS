@@ -231,7 +231,8 @@
         }
         #leaf.page-view dt, 
         #leaf.page-view dd {
-            line-height: 35px;
+            line-height: calc(0.9rem + 18px);
+            font-size: 0.9rem;
         }
         #leaf article .title {
             font-size: 1.03rem;
