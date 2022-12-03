@@ -3,7 +3,7 @@ require_once "common.php";
 
 require_once $path."db_connect.php";
 
-$postID = $_GET['post_id'];
+$post_id = $_GET['post_id'];
 
 if (!isset($_GET['page_num']) || $_GET['page_num'] < 0)
     $page_num = 1;
@@ -11,11 +11,11 @@ else
     $page_num = $_GET['page_num'];
 
 // Update 'views'
-$query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$postID}";
+$query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$post_id}";
 $result = mysqli_query($conn, $query);
 
 // Retrieve post info
-$query = "SELECT * FROM {$board_name} WHERE postID={$postID}";
+$query = "SELECT * FROM {$board_name} WHERE postID={$post_id}";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 ?>
@@ -64,10 +64,10 @@ if ($row['email']!="")
 
 <section class="buttons">
     <a class="btn" href="<?=$path?>list.php?page_num=<?=$page_num?>">List</a>
-    <a class="btn" href="<?=$path?>reply.php?post_id=<?=$postID?>">Reply</a>
+    <a class="btn" href="<?=$path?>reply.php?post_id=<?=$post_id?>">Reply</a>
     <a class="btn" href="<?=$path?>compose.php">Post New</a>
-    <a class="btn" href="<?=$path?>pre_edit.php?post_id=<?=$postID?>">Edit</a>
-    <a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$postID?>">Delete</a>
+    <a class="btn" href="<?=$path?>pre_edit.php?post_id=<?=$post_id?>">Edit</a>
+    <a class="btn" href="<?=$path?>pre_del.php?post_id=<?=$post_id?>">Delete</a>
 </section>
 
 <section class="prevnext-posts">
