@@ -75,6 +75,7 @@
         #leaf .post-list thead tr {
             border-bottom: 1px solid #dfdfdf;
             height: 35px;
+            font-size: 0.9rem;
         }
         #leaf .post-list tbody tr {
             height: 35px;
