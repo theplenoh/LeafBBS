@@ -63,13 +63,13 @@ else
     $query = "SELECT * FROM {$board_name} ORDER BY thread DESC LIMIT {$offset}, {$page_size}";
     $result = mysqli_query($conn, $query);
 
-    $postIdx = $total - $offset;
+    $post_idx = $total - $offset;
     while($row=mysqli_fetch_array($result))
     {
 ?>
     <tr>
         <td class="no">
-            <?=$postIdx?>
+            <?=$post_idx?>
         </td>
         <td class="title">
             <span <?php if ($row['depth'] > 0) { echo "class=\"reply\""; } ?>style="margin-left: <?php if ($row['depth'] > 0) { echo ($row['depth']*7).'px; '; } else { echo '0px; '; } ?>"><a href="<?=$path?>view.php?post_id=<?=$row['postID']?>&amp;page_num=<?=$page_num?>"><?=strip_tags($row['title'], '<b><i>');?></a></span>
@@ -99,7 +99,7 @@ else
     </tr>
 <?php
         $offset++;
-        $postIdx--;
+        $post_idx--;
     }
 }
 mysqli_close($conn);
