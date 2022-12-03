@@ -12,8 +12,7 @@ $page_size = 10;
 $page_scale = 5;
 
 $result_count = mysqli_query($conn, "SELECT COUNT(*) FROM {$board_name};");
-$result_row = mysqli_fetch_row($result_count);
-$total = $result_row[0];
+$total = mysqli_fetch_row($result_count)[0];
 
 $page_max = ceil($total / $page_size);
 ?>
