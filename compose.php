@@ -22,7 +22,7 @@ require_once "common.php";
         <dd>
             <input type="text" name="name" id="name" maxlength="6">
         </dd>
-        <dt><label for="passwd">Password</label></dt>
+        <dt><label for="password">Password</label></dt>
         <dd>
             <div class="warning">
                 <small>
