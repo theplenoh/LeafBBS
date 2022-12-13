@@ -193,9 +193,12 @@
             line-height: 27px;
             font-size: 16px;
         }
-        #leaf .pagination a:hover {
+        #leaf .pagination a:hover, 
+        #leaf .pagination a:active, 
+        #leaf .pagination a.active {
             text-decoration: none;
             background-color: #eeeeee;
+            color: #0969da;
         }
         #leaf .pagination a:first-child {
             border-top-left-radius: 4px;

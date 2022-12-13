@@ -117,7 +117,7 @@ mysqli_close($conn);
     for($i=1; $i<=$page_scale && $start_page<=$page_max; $i++, $start_page++)
     {
 ?>
-    <a href="<?=($start_page == $page_num)? "javascript:;":"?page_num={$start_page}"?>"><?=$start_page?></a>
+    <a <?=($start_page == $page_num)? "class=\"active\" ":""?>href="<?=($start_page == $page_num)? "javascript:;":"?page_num={$start_page}"?>"><?=$start_page?></a>
 <?php
     }
 ?>
