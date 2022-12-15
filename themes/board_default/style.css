@@ -335,6 +335,7 @@
         #leaf .thread tr {
             height: 35px;
             border-bottom: 1px solid #dfdfdf;
+            font-size: 0.9rem;
         }
         #leaf .thread th, 
         #leaf .thread td {
