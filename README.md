@@ -25,7 +25,7 @@ It is designed to run in LAMP server environment.
   + `common.php`
   + `db_info.php`
 
-## Create SQL Tables
+## SQL Tables
 ### Table `leaf_board`
 ```
 CREATE TABLE leaf_board (
@@ -42,6 +42,9 @@ CREATE TABLE leaf_board (
     views int(11) NOT NULL default '0',
     PRIMARY KEY (postID)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+```
+```
+ALTER TABLE leaf_board ADD UNIQUE thread_index(thread);
 ```
 
 ## Trivia
