@@ -43,7 +43,7 @@ CREATE TABLE leaf_board (
     PRIMARY KEY (postID)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 ```
-#### A statement to Run for Performance Enhancement
+#### A Statement to Run for Performance Enhancement
 ```
 ALTER TABLE leaf_board ADD UNIQUE thread_index(thread);
 ```
