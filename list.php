@@ -60,7 +60,11 @@ else
     $offset = ($page_num - 1) * $page_size;
     $block = floor(($page_num - 1) / $page_scale);
 
-    $query = "SELECT * FROM {$board_name} ORDER BY thread DESC LIMIT {$offset}, {$page_size}";
+    $query = "SELECT thread FROM {$board_name} ORDER BY thread DESC LIMIT {$offset}, 1";
+    $result = mysqli_query($conn, $query);
+    $start_thread = mysqli_fetch_row($result)[0];
+
+    $query = "SELECT * FROM {$board_name} WHERE thread <= '{$start_thread}' ORDER BY thread DESC LIMIT {$page_size}";
     $result = mysqli_query($conn, $query);
 
     $post_idx = $total - $offset;
