@@ -20,6 +20,7 @@ $parent_content = "\n&gt;".str_replace("\n", "\n&gt;", $parent_row['content']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>themes/<?=$theme_name?>/style.css">
+    <script type="text/javascript" src="<?=$path?>leafbbs.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@ $parent_content = "\n&gt;".str_replace("\n", "\n&gt;", $parent_row['content']);
 <h1><?=$board_title?></h1>
 <main>
     <h2>Reply to a Post</h2>
-    <form action="<?=$path?>insert_reply.php" method="post">
+    <form id="form" action="<?=$path?>insert_reply.php" method="post">
     <input type="hidden" name="parent_depth" value="<?=$parent_row['depth']?>">
     <input type="hidden" name="parent_thread" value="<?=$parent_row['thread']?>">
     <dl>
@@ -65,5 +66,11 @@ $parent_content = "\n&gt;".str_replace("\n", "\n&gt;", $parent_row['content']);
     </form>
 </main>
 </div>
+<script>
+var form = document.getElementById("form");
+form.onsubmit = function() {
+    return checkInputs(form);
+};
+</script>
 </body>
 </html>
