@@ -9,6 +9,7 @@ require_once "common.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>themes/<?=$theme_name?>/style.css">
+    <script type="text/javascript" src="<?=$path?>leafbbs.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@ require_once "common.php";
 <h1><?=$board_title?></h1>
 <main>
     <h2>Compose</h2>
-    <form action="<?=$path?>insert.php" method="post">
+    <form id="form" action="<?=$path?>insert.php" method="post">
     <dl>
         <dt><label for="name">Name</label></dt>
         <dd>
@@ -52,5 +53,11 @@ require_once "common.php";
     </form>
 </main>
 </div>
+<script>
+var form = document.getElementById("form");
+form.onsubmit = function() {
+    return checkInputs(form);
+};
+</script>
 </body>
 </html>
