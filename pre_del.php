@@ -1,7 +1,5 @@
 <?php
 require_once "common.php";
-$page_title = "Delete Post";
-
 require_once $path."db_connect.php";
 
 $postID = $_GET['post_id'];
