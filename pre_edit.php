@@ -16,6 +16,7 @@ $row = mysqli_fetch_array($result);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>themes/<?=$theme_name?>/style.css">
+    <script type="text/javascript" src="<?=$path?>leafbbs.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@ $row = mysqli_fetch_array($result);
 <h1><?=$board_title?></h1>
 <main>
     <h2>Edit a Post</h2>
-    <form action="<?=$path?>edit.php?post_id=<?=$postID?>" method="post">
+    <form id="form" action="<?=$path?>edit.php?post_id=<?=$postID?>" method="post">
     <dl>
         <dt><label for="posted-by">Posted by</label></dt>
         <dd>
@@ -56,5 +57,11 @@ $row = mysqli_fetch_array($result);
     </form>
 </main>
 </div>
+<script>
+var form = document.getElementById("form");
+form.onsubmit = function() {
+    return checkInputs(form);
+};
+</script>
 </body>
 </html>
