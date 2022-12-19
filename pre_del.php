@@ -14,13 +14,15 @@ $postID = $_GET['post_id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="<?=$path?>themes/<?=$theme_name?>/style.css">
+    <script type="text/javascript" src="<?=$path?>leafbbs.js"></script>
 </head>
+
 <body>
 <div id="leaf">
 <h1><?=$board_title?></h1>
 <main>
     <h2>Confirm before Deleting</h2>
-    <form action="<?=$path?>del.php?post_id=<?=$postID?>" method="post">
+    <form id="form" action="<?=$path?>del.php?post_id=<?=$postID?>" method="post">
     <dl>
         <dt>Password</dt>
         <dd>
@@ -34,5 +36,11 @@ $postID = $_GET['post_id'];
     </form>
 </main>
 </div>
+<script>
+var form = document.getElementById("form");
+form.onsubmit = function() {
+    return checkPassword(form);
+};
+</script>
 </body>
 </html>
