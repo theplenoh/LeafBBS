@@ -1,6 +1,5 @@
 <?php
 require_once "common.php";
-$page_title = "Reply to";
 
 require_once $path."db_connect.php";
 
