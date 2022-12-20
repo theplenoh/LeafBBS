@@ -9,13 +9,13 @@ $posted_by = sanitize($_POST['name']);
 $password = sanitize($_POST['password']);
 $email = sanitize($_POST['email']);
 $title = sanitize($_POST['title']);
-$ip_addr = $_SERVER['REMOTE_ADDR'];
 $content = sanitize($_POST['content']);
+$ip_addr = $_SERVER['REMOTE_ADDR'];
 
-if (empty($_POST['name'])) error_message("There was no name value passed.");
-if (empty($_POST['password'])) error_message("There was no password value passed.");
-if (empty($_POST['title'])) error_message("There was no title value passed.");
-if (empty($_POST['content'])) error_message("There was no content value passed.");
+if (empty($posted_by)) error_message("There was no name value passed.");
+if (empty($password)) error_message("There was no password value passed.");
+if (empty($title)) error_message("There was no title value passed.");
+if (empty($content)) error_message("There was no content value passed.");
 
 $prev_parent_thread = ceil($parent_thread/1000)*1000 - 1000;
 

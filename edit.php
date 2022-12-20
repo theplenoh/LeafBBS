@@ -10,10 +10,10 @@ $email = sanitize($_POST['email']);
 $title = sanitize($_POST['title']);
 $content = sanitize($_POST['content']);
 
-if (empty($_POST['name'])) error_message("There was no name value passed.");
-if (empty($_POST['password'])) error_message("There was no password value passed.");
-if (empty($_POST['title'])) error_message("There was no title value passed.");
-if (empty($_POST['content'])) error_message("There was no content value passed.");
+if (empty($posted_by)) error_message("There was no name value passed.");
+if (empty($password)) error_message("There was no password value passed.");
+if (empty($title)) error_message("There was no title value passed.");
+if (empty($content)) error_message("There was no content value passed.");
 
 $result = mysqli_query($conn, "SELECT password FROM {$board_name} WHERE postID={$postID}");
 $row = mysqli_fetch_array($result);
