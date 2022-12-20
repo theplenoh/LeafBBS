@@ -1,5 +1,11 @@
 <?php
 require_once "common.php";
+
+if (!isset($_POST['name'])) error_message("There was no name value passed.");
+if (!isset($_POST['password'])) error_message("There was no password value passed.");
+if (!isset($_POST['title'])) error_message("There was no title value passed.");
+if (!isset($_POST['content'])) error_message("There was no content value passed.");
+
 require_once $path."db_connect.php";
 
 $postID = $_GET['post_id'];
@@ -21,13 +27,7 @@ if ($password == $row['password'])
 }
 else
 {
-?>
-<script>
-alert("Wrong password!");
-history.go(-1);
-</script>
-<?php
-    exit;
+    error_message("Wrong password!");
 }
 ?>
 <script>

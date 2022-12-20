@@ -1,5 +1,8 @@
 <?php
 require_once "common.php";
+
+if(!isset($_POST['password'])) error_message("There was no password value passed.");
+
 require_once $path."db_connect.php";
 
 $postID = $_GET['post_id'];
@@ -17,13 +20,7 @@ if ($password == $row['password'])
 }
 else
 {
-?>
-<script>
-alert("Wrong password!");
-history.go(-1);
-</script>
-<?php
-exit;
+    error_message("Wrong password!");
 }
 ?>
 <script>
