@@ -1,11 +1,6 @@
 <?php
 require_once "common.php";
 
-if (empty($_POST['name'])) error_message("There was no name value passed.");
-if (empty($_POST['password'])) error_message("There was no password value passed.");
-if (empty($_POST['title'])) error_message("There was no title value passed.");
-if (empty($_POST['content'])) error_message("There was no content value passed.");
-
 require_once $path."db_connect.php";
 
 $postID = $_GET['post_id'];
@@ -14,6 +9,11 @@ $posted_by = sanitize($_POST['name']);
 $email = sanitize($_POST['email']);
 $title = sanitize($_POST['title']);
 $content = sanitize($_POST['content']);
+
+if (empty($_POST['name'])) error_message("There was no name value passed.");
+if (empty($_POST['password'])) error_message("There was no password value passed.");
+if (empty($_POST['title'])) error_message("There was no title value passed.");
+if (empty($_POST['content'])) error_message("There was no content value passed.");
 
 $result = mysqli_query($conn, "SELECT password FROM {$board_name} WHERE postID={$postID}");
 $row = mysqli_fetch_array($result);

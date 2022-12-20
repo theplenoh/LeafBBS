@@ -1,12 +1,12 @@
 <?php
 require_once "common.php";
 
-if(empty($_POST['password'])) error_message("There was no password value passed.");
-
 require_once $path."db_connect.php";
 
 $postID = $_GET['post_id'];
-$password = $_POST['password'];
+$password = sanitize($_POST['password']);
+
+if (empty($_POST['password'])) error_message("There was no password value passed.");
 
 $result = mysqli_query($conn, "SELECT password FROM {$board_name} WHERE postID={$postID}");
 $row = mysqli_fetch_array($result);

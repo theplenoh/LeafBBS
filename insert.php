@@ -1,19 +1,19 @@
 <?php
 require_once "common.php";
 
-if (empty($_POST['name'])) error_message("There was no name value passed.");
-if (empty($_POST['password'])) error_message("There was no password value passed.");
-if (empty($_POST['title'])) error_message("There was no title value passed.");
-if (empty($_POST['content'])) error_message("There was no content value passed.");
-
-require_once $path."db_connect.php";
-
 $posted_by = sanitize($_POST['name']);
 $password = sanitize($_POST['password']);
 $email = sanitize($_POST['email']);
 $title = sanitize($_POST['title']);
 $content = sanitize($_POST['content']);
 $ip_addr = $_SERVER['REMOTE_ADDR'];
+
+if (empty($_POST['name'])) error_message("There was no name value passed.");
+if (empty($_POST['password'])) error_message("There was no password value passed.");
+if (empty($_POST['title'])) error_message("There was no title value passed.");
+if (empty($_POST['content'])) error_message("There was no content value passed.");
+
+require_once $path."db_connect.php";
 
 // Get the value of max_thread
 $query = "SELECT max(thread) FROM {$board_name}";

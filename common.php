@@ -18,7 +18,7 @@ ini_set("display_errors", 1);
 // Function library
 function sanitize($text)
 {
-    return htmlentities(addslashes($text));
+    return htmlentities(addslashes(trim($text)));
 }
 
 function filter($text)
