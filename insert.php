@@ -23,14 +23,8 @@ $max_thread = ceil($max_thread_fetch[0]/1000)*1000 + 1000;
 
 $query = "INSERT INTO {$board_name} (thread, depth, name, password, email, title, views, datetime, ipaddr, content) ";
 $query.= "VALUES ({$max_thread}, 0, '{$posted_by}', '{$password}', '{$email}', '{$title}', 0, UNIX_TIMESTAMP(), '{$ip_addr}', '{$content}')";
-//$result = mysqli_query($conn, $query);
-if (mysqli_query($conn, $query))
-{
-}
-else
-{
-    echo mysqli_error($conn);
-}
+
+mysqli_query($conn, $query) or error_message("Failed to save the post in the database.");
 
 // MySQL connection close
 mysqli_close($conn);

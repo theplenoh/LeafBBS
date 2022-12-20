@@ -25,14 +25,8 @@ $update_thread = mysqli_query($conn, $query);
 $query = "INSERT INTO {$board_name} (thread, depth, name, password, email, title, views, datetime, ipaddr, content) ";
 $query.= "VALUES ('".($parent_thread-1)."'";
 $query.= ",'".($parent_depth+1)."','{$posted_by}','{$password}','{$email}','{$title}', 0, UNIX_TIMESTAMP(), '{$ip_addr}', '{$content}')";
-//$result = mysqli_query($conn, $query);
-if (mysqli_query($conn, $query))
-{
-}
-else
-{
-    echo mysqli_error($conn);
-}
+
+mysqli_query($conn, $query) or error_message("Failed to save the reply in the database.");
 
 mysqli_close($conn);
 

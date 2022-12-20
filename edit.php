@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($result);
 if ($password == $row['password'])
 {
     $query = "UPDATE {$board_name} SET name='{$posted_by}', email='{$email}', title='{$title}', content='{$content}' WHERE postID={$postID}";
-    $result = mysqli_query($conn, $query);
+    mysqli_query($conn, $query) or error_message("Failed to edit the post.");
 
     $success = true;
 }

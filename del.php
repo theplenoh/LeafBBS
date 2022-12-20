@@ -14,7 +14,7 @@ $row = mysqli_fetch_array($result);
 if ($password == $row['password'])
 {
     $query = "DELETE FROM {$board_name} WHERE postID={$postID}";
-    $result = mysqli_query($conn, $query);
+    mysqli_query($conn, $query) or error_message("Failed to delete the post.");
 
     $success = true;
 }

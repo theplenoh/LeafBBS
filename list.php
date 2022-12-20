@@ -10,7 +10,7 @@ else
 $page_size = 10;
 $page_scale = 5;
 
-$result_count = mysqli_query($conn, "SELECT COUNT(*) FROM {$board_name};");
+$result_count = @mysqli_query($conn, "SELECT COUNT(*) FROM {$board_name};") or die("There was an error while retrieving the list of posts.");
 $total = mysqli_fetch_row($result_count)[0];
 
 $page_max = ceil($total / $page_size);
