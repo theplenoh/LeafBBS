@@ -1,6 +1,5 @@
 <?php
 require_once "common.php";
-
 require_once $path."db_connect.php";
 
 if (!isset($_GET['page_num']) || $_GET['page_num'] < 0)

@@ -1,6 +1,5 @@
 <?php
 require_once "common.php";
-
 require_once $path."db_connect.php";
 
 $posted_by = sanitize($_POST['name']);

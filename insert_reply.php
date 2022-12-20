@@ -1,6 +1,5 @@
 <?php
 require_once "common.php";
-
 require_once $path."db_connect.php";
 
 $parent_thread = $_POST['parent_thread'];
