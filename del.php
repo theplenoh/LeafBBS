@@ -1,7 +1,7 @@
 <?php
 require_once "common.php";
 
-if(!isset($_POST['password'])) error_message("There was no password value passed.");
+if(empty($_POST['password'])) error_message("There was no password value passed.");
 
 require_once $path."db_connect.php";
 
