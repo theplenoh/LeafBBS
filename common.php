@@ -32,4 +32,12 @@ function filter($text)
 
     return $text;
 }
+
+function error_message($message, $type = "on")
+{
+    echo "<script>alert('{$message}');";
+    if ($type == "on") echo "history.go(-1);";
+    echo "</script>";
+    exit;
+}
 ?>
