@@ -249,6 +249,8 @@
         }
         #leaf.page-view article p {
             margin: 0.5rem 0;
+            overflow: clip;
+            line-height: 1.5;
         }
     @media screen and (max-width: 567px) {
         #leaf.page-view dt {
