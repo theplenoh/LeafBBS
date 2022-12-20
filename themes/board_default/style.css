@@ -352,6 +352,7 @@
         }
         #leaf .thread .title {
             text-align: left;
+            font-size: 1.0rem;
         }
         #leaf .thread .title .reply {
             padding-left: 16px;
