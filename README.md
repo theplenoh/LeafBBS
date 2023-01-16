@@ -51,7 +51,7 @@ ALTER TABLE leaf_board ADD UNIQUE thread_index(thread);
 ## Trivia
 The former name of LeafBBS is CocoaBBS as it can be observed in this repo commit history. 
 However, Plenoh changed the name of this internet bullet-in board system(BBS) since he felt unhealthy and noticed the risk of getting diabetes due to his developing dependency on caffeine and sugar. 
-Green diet such as lettuce, cucumber, and spinach is a lot healthier.
+Green diet such as lettuce, cucumber, and spinach is much healthier.
 
 ## License Information
 LeafBBS is licensed and released under GPL v2.
