@@ -11,8 +11,29 @@ else
     $page_num = $_GET['page_num'];
 
 // Update 'views'
-$query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$post_id}";
-$result = mysqli_query($conn, $query);
+if(!isset($_COOKIE["{$board_name}_views"])) // There is no cookie set
+{
+    setcookie("{$board_name}_views", $_SERVER['REMOTE_ADDR'].",".$post_id, time()+60, "/");
+
+    $query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$post_id}";
+    $result = mysqli_query($conn, $query);
+}
+else // The cookie is set
+{
+    $visited_posts = explode(",", $_COOKIE["{$board_name}_views"]);
+    array_shift($visited_posts);
+
+    if(!in_array($post_id, $visited_posts)) // The cookie is set but the post has never been viewed
+    {
+        $cookie_value = $_COOKIE["{$board_name}_views"];
+        $cookie_value .=",".$post_id;
+        setcookie("{$board_name}_views", $cookie_value, time()+60, "/");
+
+        $query = "UPDATE {$board_name} SET views=views+1 WHERE postID={$post_id}";
+        $result = mysqli_query($conn, $query);
+    }
+}
+
 
 // Retrieve post info
 $query = "SELECT * FROM {$board_name} WHERE postID={$post_id}";
