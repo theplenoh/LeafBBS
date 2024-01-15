@@ -112,9 +112,9 @@ mysqli_close($conn);
 </main>
 <p class="pagination">
 <?php $prev_block = ($block - 1) * $page_scale + 1; ?>
-    <a href="<?=($block > 0)? "?page_num={$prev_block}":"javascript:;"?>">&laquo;</a>
+    <a class="symbol prev-block" href="<?=($block > 0)? "?page_num={$prev_block}":"javascript:;"?>">이전 블록</a>
 <?php $prev_page = $page_num - 1; ?>
-    <a href="<?=($page_max > 1 && $offset != 0 && $page_num && $page_num > 1)? "?page_num={$prev_page}":"javascript:;"?>">&lsaquo;</a>
+    <a class="symbol prev-page" href="<?=($page_max > 1 && $offset != 0 && $page_num && $page_num > 1)? "?page_num={$prev_page}":"javascript:;"?>">이전 페이지</a>
 <?php
     $start_page = $block * $page_scale + 1;
     for($i=1; $i<=$page_scale && $start_page<=$page_max; $i++, $start_page++)
@@ -125,9 +125,9 @@ mysqli_close($conn);
     }
 ?>
 <?php $next_page = $page_num + 1; ?>
-    <a href="<?=($page_max > $page_num)? "?page_num={$next_page}":"javascript:;"?>">&rsaquo;</a>
+    <a class="symbol next-page" href="<?=($page_max > $page_num)? "?page_num={$next_page}":"javascript:;"?>">다음 페이지</a>
 <?php $next_block = ($block + 1) * $page_scale + 1; ?>
-    <a href="<?=($page_max > ($block + 1)*$page_scale)? "?page_num={$next_block}":"javascript:;"?>">&raquo;</a>
+    <a class="symbol next-block" href="<?=($page_max > ($block + 1)*$page_scale)? "?page_num={$next_block}":"javascript:;"?>">다음 블록</a>
 </p>
 <p class="buttons">
     <a class="btn" href="<?=$path?>compose.php">Post</a>
